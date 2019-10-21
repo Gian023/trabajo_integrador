@@ -2,7 +2,11 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
 /* href="https://fonts.googleapis.com/css?family=Oswald&display=swap" */
 /* me aseguro que las medidas de los elementos, son las que defino */
-*{box-sizing: border-box;}
+*{box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+
+}
 
 body{
   font-family:  sans-serif;
@@ -15,8 +19,9 @@ body{
   width: 100%;
   display: flex;
   position: relative;
-  border: solid 2px red;
   flex-direction: column;
+  flex-wrap: wrap;
+
 }
 header{
   background: gray;
