@@ -1,26 +1,39 @@
 /* importo el tipo de fuente */
-@import url('https://fonts.googleapis.com/css?family=Poiret One');
-
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+/* href="https://fonts.googleapis.com/css?family=Oswald&display=swap" */
 /* me aseguro que las medidas de los elementos, son las que defino */
 *{box-sizing: border-box;}
 
 body{
-  font-family: Poiret One;
+  font-family:  sans-serif;
+  /* "Oswald"; */
   font-size: 1rem;
   /* text-transform: uppercase; */
   margin: 0;
   border: 0;
   padding: 0;
   width: 100%;
+  display: flex;
+  position: relative;
+  border: solid 2px red;
+  flex-direction: column;
 }
 header{
   background: gray;
 }
 
-
+main h1 {
+  text-transform: uppercase;
+  color: red;
+  font-weight: bold;
+}
 
 
 
 footer{
+  width: 100%;
   background: gray;
+  position: relative;
+  position: absolute;
+  bottom: 0px;
 }
