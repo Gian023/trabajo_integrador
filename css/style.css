@@ -1,0 +1,26 @@
+/* importo el tipo de fuente */
+@import url('https://fonts.googleapis.com/css?family=Poiret One');
+
+/* me aseguro que las medidas de los elementos, son las que defino */
+*{box-sizing: border-box;}
+
+body{
+  font-family: Poiret One;
+  font-size: 1rem;
+  /* text-transform: uppercase; */
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+}
+header{
+  background: gray;
+}
+
+
+
+
+
+footer{
+  background: gray;
+}
