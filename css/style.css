@@ -72,6 +72,9 @@ header{
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+#logo{
+  width: 10%;
+}
 
 /* MAIN */
 main h1 {
@@ -91,17 +94,28 @@ footer{
   /* bottom: 0px; */
   background: rgba(0,0,0,0.5);
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-footer ul {
-  width: 50%;
 }
-footer ul li{
-  margin: 0 10%;
-}
-
-#logo{
+footer #logo{
   width: 10%;
+  margin: 2%;
+}
+footer ul {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: 30%;
+  padding: 2%;
+  color: white;
+}
+footer ul li a{
+  color: rgba(100, 100, 100, 0.8);
+}
+/* hover */
+footer ul li:hover a{
+  color: red;
+  font-size: 1.1rem;
 }
