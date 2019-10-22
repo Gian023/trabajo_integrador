@@ -8,6 +8,34 @@
   list-style: none;
 
 }
+
+body{
+  font-family:  sans-serif;
+  /* "Oswald"; */
+  font-size: 1rem;
+  /* text-transform: uppercase; */
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+  background-color: rgba(0,0,0,0.9);
+}
+/* HEADER */
+
+header{
+  background: rgba(0,0,0,0.5);
+  width: 95%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .dropbtn {
   background-color:red;
   color: white;
@@ -44,34 +72,8 @@
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
-body{
-  font-family:  sans-serif;
-  /* "Oswald"; */
-  font-size: 1rem;
-  /* text-transform: uppercase; */
-  margin: 0;
-  border: 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  flex-wrap: wrap;
-  color: white;
-  background-color: rgba(0,0,0,0.9);
 
-}
-header{
-  background: rgba(0,0,0,0.5);
-  width: 95%;
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-}
-
+/* MAIN */
 main h1 {
   text-transform: uppercase;
   color: red;
@@ -80,7 +82,7 @@ main h1 {
 }
 
 
-
+/* FOOTER */
 footer{
   width: 100%;
   background: gray;
