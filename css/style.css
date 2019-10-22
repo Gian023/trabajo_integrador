@@ -1,6 +1,7 @@
 /* importo el tipo de fuente */
 @import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
 /* href="https://fonts.googleapis.com/css?family=Oswald&display=swap" */
+
 /* me aseguro que las medidas de los elementos, son las que defino */
 *{box-sizing: border-box;
   text-decoration: none;
@@ -21,16 +22,26 @@ body{
   position: relative;
   flex-direction: column;
   flex-wrap: wrap;
+  color: white;
+  background-color: rgba(0,0,0,0.9);
 
 }
 header{
-  background: gray;
+  background: rgba(0,0,0,0.5);
+  width: 95%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 
 main h1 {
   text-transform: uppercase;
   color: red;
   font-weight: bold;
+  text-align: center;
 }
 
 
@@ -38,7 +49,22 @@ main h1 {
 footer{
   width: 100%;
   background: gray;
-  position: relative;
-  position: absolute;
-  bottom: 0px;
+  /* position: relative;
+  position: absolute; */
+  /* bottom: 0px; */
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+footer ul {
+  width: 50%;
+}
+footer ul li{
+  margin: 0 10%;
+}
+
+#logo{
+  width: 10%;
 }
