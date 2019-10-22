@@ -9,18 +9,16 @@
 
 }
 .dropbtn {
-  background-color: #3498DB;
+  background-color:red;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
 }
-
 .dropbtn:hover, .dropbtn:focus {
   background-color: #2980B9;
 }
-
 .dropdown {
   position: relative;
   display: inline-block;
