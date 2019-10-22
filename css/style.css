@@ -8,8 +8,38 @@
   list-style: none;
 
 }
+<<<<<<< HEAD
 #sp-header {
   background-color: transparent;
+=======
+
+body{
+  font-family:  sans-serif;
+  /* "Oswald"; */
+  font-size: 1rem;
+  /* text-transform: uppercase; */
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+  background-color: rgba(0,0,0,0.9);
+}
+/* HEADER */
+
+header{
+  background: rgba(0,0,0,0.5);
+  width: 95%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+>>>>>>> master
 }
 .dropbtn {
   background-color:transparent;
@@ -47,34 +77,11 @@
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
-body{
-  font-family:  sans-serif;
-  /* "Oswald"; */
-  font-size: 1rem;
-  /* text-transform: uppercase; */
-  margin: 0;
-  border: 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  flex-wrap: wrap;
-  color: white;
-  background-color: rgba(0,0,0,0.9);
-
-}
-header{
-  background: rgba(0,0,0,0.5);
-  width: 95%;
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
+#logo{
+  width: 10%;
 }
 
+/* MAIN */
 main h1 {
   text-transform: uppercase;
   color: red;
@@ -83,7 +90,7 @@ main h1 {
 }
 
 
-
+/* FOOTER */
 footer{
   width: 100%;
   background: gray;
@@ -92,17 +99,28 @@ footer{
   /* bottom: 0px; */
   background: rgba(0,0,0,0.5);
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+  flex-wrap: wrap;
+  justify-content: space-between;
 
-footer ul {
-  width: 50%;
 }
-footer ul li{
-  margin: 0 10%;
-}
-
-#logo{
+footer #logo{
   width: 10%;
+  margin: 2%;
+}
+footer ul {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: 30%;
+  padding: 2%;
+  color: white;
+}
+footer ul li a{
+  color: rgba(100, 100, 100, 0.8);
+}
+/* hover */
+footer ul li:hover a{
+  color: red;
+  font-size: 1.1rem;
 }
