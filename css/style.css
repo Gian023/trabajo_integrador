@@ -137,9 +137,6 @@ nav ul{
  /*cuando ya esta checkeado comienza el efecto */
  /*el segundo nos permite poner el tiempo de tardanza*/
 }
-
-/*voy a hacer una media para pantallas mas grandes que un celular */
-
 /*Hago el dropdown que saque en W3 */
 ul {
   list-style-type: none;
@@ -195,11 +192,20 @@ li.dropdown {
 /* MAIN */
 main div{
   display: flex;
-  flex-wrap: wrap;
-  border:solid 2px red;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  border:solid 2px gray;
+
+}
+main div a{
+  display: block;
+  width: 16%;
+  display: flex;
+  justify-content: space-around;
+
 }
 main div a img{
-  width: 65%;
+  width: 100%;
 
 }
 
@@ -248,8 +254,9 @@ footer .contacto p{
     color: rgba(100, 100, 100, 0.8);
 }
 
-
 /* MEDIA */
+
+/*voy a hacer una media para pantallas mas grandes que un celular */
 /* Tablet / Celu */
 @media screen and (min-width: 800px) {
   .nav-toggle-label {
