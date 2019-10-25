@@ -193,8 +193,15 @@ li.dropdown {
 }
 
 /* MAIN */
+main div{
+  display: flex;
+  flex-wrap: wrap;
+  border:solid 2px red;
+}
+main div a img{
+  width: 65%;
 
-
+}
 
 /* FOOTER */
 footer{
