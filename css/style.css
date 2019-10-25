@@ -190,23 +190,46 @@ li.dropdown {
 }
 
 /* MAIN */
-main div{
+main .pelis{
+  /* display: flex;
+  flex-wrap:wrap;
+  justify-content: space-around; */
+  border:solid 2px gray;
+  overflow: hidden;
+}
+main .pelis ul{
   display: flex;
   flex-wrap:wrap;
   justify-content: space-around;
-  border:solid 2px gray;
-
+  width: 200%;
+  animation: cambio 20s infinity;
 }
-main div a{
-  display: block;
+@keyframes cambio{
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+
+main .pelis ul li{
   width: 16%;
+}
+main div ul li a{
+  display: block;
+  width: 100%;
   display: flex;
   justify-content: space-around;
 
 }
-main div a img{
+main div ul li a img{
   width: 100%;
-
 }
 
 /* FOOTER */
