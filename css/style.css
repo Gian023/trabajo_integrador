@@ -8,11 +8,7 @@
   list-style: none;
 
 }
-<<<<<<< HEAD
-#sp-header {
-  background-color: transparent;
-=======
-}
+
 body{
   font-family:  sans-serif;
   /* "Oswald"; */
@@ -39,7 +35,11 @@ header{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
->>>>>>> master
+
+}
+#sp-header {
+  background-color: transparent;
+=======
 }
 .dropbtn {
   background-color:transparent;
@@ -94,33 +94,43 @@ main h1 {
 footer{
   width: 100%;
   background: gray;
-  /* position: relative;
-  position: absolute; */
-  /* bottom: 0px; */
   background: rgba(0,0,0,0.5);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
-footer #logo{
-  width: 10%;
+footer .DB{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  font-size: 0.8rem;
   margin: 2%;
 }
-footer ul {
+footer #logo{
   width: 40%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-right: 30%;
-  padding: 2%;
-  color: white;
+  margin-top:5%;
 }
-footer ul li a{
+footer .redes{
+  margin:2%;
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-space-around;
+}
+footer div a{
   color: rgba(100, 100, 100, 0.8);
 }
 /* hover */
-footer ul li:hover a{
+footer a:hover {
   color: red;
   font-size: 1.1rem;
+}
+footer .contacto{
+  display: flex;
+  flex-direction: column;
+  margin:2%;
+  width: 20%;
+}
+footer .contacto p{
+    color: rgba(100, 100, 100, 0.8);
 }
