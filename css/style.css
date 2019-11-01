@@ -6,7 +6,6 @@
 *{box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-
 }
 
 body{
@@ -29,7 +28,8 @@ body{
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 :root {
-  --background: rgba(0, 214, 170, .85);
+  --background: rgba(255, 0, 0, .7);
+  /* --background: rgba(0, 214, 170, .85); */
 }
 
 *, *::before, *::after {
@@ -138,7 +138,7 @@ nav ul{
  /*el segundo nos permite poner el tiempo de tardanza*/
 }
 /*Hago el dropdown que saque en W3 */
-ul {
+header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -146,11 +146,11 @@ ul {
 
 }
 
-li {
+header li {
   float: left;
 }
 
-li a, .dropbtn {
+header li a, .dropbtn {
   display: inline-block;
   color: white;
   text-align: center;
@@ -158,11 +158,11 @@ li a, .dropbtn {
   text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
+header li a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
 
-li.dropdown {
+header li.dropdown {
   display: inline-block;
 }
 
@@ -187,6 +187,9 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+header form{
+  
 }
 
 /* Main */

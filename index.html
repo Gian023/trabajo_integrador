@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>Proyecto integrador</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+
     <script type="text/javascript" src="js/java.js">
 
     </script>
@@ -15,11 +17,30 @@
 
 <header>
   <h1 class="logo">Logo</h1>
+    <nav>
+      <!-- <form class="busqueda" action="index.html" method="get">
+        <input type="search" name="" value="">
+        <button type="send" name="button">enviar</button>
+      </form> -->
+    </nav>
+
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+
+            <div class="uk-navbar-item">
+                <form class="uk-search uk-search-navbar">
+                    <span uk-search-icon></span>
+                    <input class="uk-search-input" type="search" placeholder="Search...">
+                </form>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+
     <input type="checkbox" id="nav-toggle" class="nav-toggle" name="" value="">
-    <form class="busqueda" action="index.html" method="get">
-      <input type="search" name="" value="">
-      <button type="send" name="button">enviar</button>
-    </form>
     <nav>
     <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -66,23 +87,68 @@
         <p>Nótese que al clickear en cualquiera de las series debe redirigir al detalle de esa serie [Ver página 5]</p>
         <p>Punto extra: Se valora que las series se muestren con su poster y se valora más aún que figuren en un carrousel.</p>
       <h1>Películas</h1>
-      <h2>Más populares</h2>
-      <div class="pelis">
+
+      <!-- <div class="pelis">
         <ul id="pelis">
-        <!-- aca van las series con API -->
+        aca van las series con API
         </ul>
         <h2>Mayor puntaje</h2>
         <div class="puntaje">
           <ul id="puntaje">
-          <!-- aca van las series con API -->
+          aca van las series con API
           </ul>
           <h2>Al aire</h2>
           <div class="aire">
             <ul id="aire">
-            <!-- aca van las series con API -->
+            aca van las series con API
             </ul>
-      </div>
+      </div> -->
+
+
+    <!-- ////////////////////////////////////////// -->
+    <h2>Más populares</h2>
+    <div uk-slider>
+
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m" id="maspopulares">
+        <!-- ACA VA EL API -->
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+    </div>
+
+    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+    </div>
+
+    <div uk-slider>
+
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m" id="maspopulares">
+        <!-- ACA VA EL API -->
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+    </div>
+
+    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+    </div>
+
+
+
+
+
+
+
     </main>
+
 
 
 <!-- FOOTER -->
@@ -108,6 +174,10 @@
       </div>
     </footer>
 
+    <!-- uikit -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+    <!-- script nuestro -->
     <script type="text/javascript" src="js/java.js"></script>
   </body>
 </html>
