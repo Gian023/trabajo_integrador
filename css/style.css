@@ -217,7 +217,13 @@ main div ul li a img{
   width: 100%;
 }
  */
-
+#pelis{
+  display: flex;
+  flex-wrap: nowrap;
+}
+#pelis li img{
+  width: 500%;
+}
 
 
 
