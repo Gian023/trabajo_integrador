@@ -189,40 +189,14 @@ li.dropdown {
   display: block;
 }
 
-/* MAIN */
-/* main .pelis{
-  display: flex;
-  flex-wrap:wrap;
-  justify-content: space-around;
-  border:solid 2px gray;
-}
-main .pelis ul{
-  display: flex;
-  flex-wrap:wrap;
-  justify-content: space-around;
-  width: 200%;
-  animation: cambio 20s infinity;
-}
-main .pelis ul li{
-  width: 16%;
-}
-main div ul li a{
-  display: block;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+/* Main */
 
-}
-main div ul li a img{
-  width: 100%;
-}
- */
 #pelis{
   display: flex;
   flex-wrap: nowrap;
 }
 #pelis li img{
-  width: 500%;
+  width: 150%;
 }
 
 
