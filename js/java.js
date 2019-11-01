@@ -29,7 +29,7 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
      var pel = datos.results;
 
      for (var i=0; i<pel.length; i++){
-       ul.innerHTML += '<li>' + '<img src="' + datos.results[i].backdrop_path + '">' + '</li>'
+       ul.innerHTML += '<li>' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</li>'
      }
    })
 
