@@ -193,11 +193,23 @@ li.dropdown {
 
 #pelis, #aire, #puntaje{
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+
 }
-#pelis, #aire, #puntaje li img{
-  width: 150%;
+#pelis li, #aire li, #puntaje li{
+  width: 18%;
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
+#pelis li img, #aire li img, #puntaje li img{
+  width: 100%;
+}
+#pelis li:hover, #aire li:hover, #puntaje li:hover{
+  width: 20%;
+}
+
 /* comentario */
 
 

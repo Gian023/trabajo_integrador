@@ -28,7 +28,7 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
           ul.innerHTML += '<li>' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</li>'
         }
       })
-   }
+
    /*fech de series al aire */
    fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=7246c48f98d8db92d443b21af0633a14&language=en-US&page=1")
    .then(function(respuesta){
@@ -43,7 +43,7 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
        ul.innerHTML += '<li>' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</li>'
      }
    })
-   }
+
 
 
 
