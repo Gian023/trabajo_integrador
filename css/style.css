@@ -191,11 +191,11 @@ li.dropdown {
 
 /* Main */
 
-#pelis{
+#pelis, #aire, #puntaje{
   display: flex;
   flex-wrap: nowrap;
 }
-#pelis li img{
+#pelis, #aire, #puntaje li img{
   width: 150%;
 }
 /* comentario */
