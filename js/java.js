@@ -1,5 +1,5 @@
 window.onload = function(){
-
+// nada
 // Api's
 fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false")
   .then(function(respuesta){
