@@ -28,8 +28,7 @@ body{
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 :root {
-  --background: rgba(255, 0, 0, .7);
-  /* --background: rgba(0, 214, 170, .85); */
+  --background: rgba(0, 214, 170, .85);
 }
 
 *, *::before, *::after {
@@ -189,32 +188,14 @@ header li.dropdown {
   display: block;
 }
 header form{
-  
+
 }
 
 /* Main */
 
-#pelis, #aire, #puntaje{
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-around;
+main{
 
 }
-#pelis li, #aire li, #puntaje li{
-  width: 18%;
-  margin-bottom: 1%;
-  margin-top: 1%;
-}
-#pelis li img, #aire li img, #puntaje li img{
-  width: 100%;
-}
-#pelis li:hover, #aire li:hover, #puntaje li:hover{
-  width: 20%;
-}
-
-/* comentario */
-
 
 
 /* FOOTER */

@@ -21,7 +21,7 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
      })
      .then(function(datos){
        console.log(datos);
-        var ul = document.querySelector("#puntaje");
+        var ul = document.querySelector("#mayorpuntaje");
         var pel = datos.results;
 
         for (var i=0; i<pel.length; i++){
@@ -36,7 +36,7 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
    })
    .then(function(datos){
     console.log(datos);
-     var ul = document.querySelector("#aire");
+     var ul = document.querySelector("#alaire");
      var pel = datos.results;
 
      for (var i=0; i<pel.length; i++){
