@@ -91,7 +91,6 @@ nav.listado, .uk-navbar-container {
   text-align: left;
   top: 100%;
   width: 100%;
-
 background: var(--background);
 /* el de antes */
 transform: scale(1,0);
@@ -104,6 +103,8 @@ transition: transform 400ms ease-in-out;
   left:0%;
 width: 100%;
 top:120px;
+transform-origin: top;
+transition: transform 700ms ease-in-out;
 
 }
 
