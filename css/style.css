@@ -63,6 +63,7 @@ header {
   width: 100%;
 }
 
+
 .nav-toggle {
   display:none;
   /*esto va a hacer que el checkbox no se vea, y va a ser reemplazado por el span */
@@ -84,12 +85,13 @@ header {
 span{
   color:white;
   }
-nav {
+
+nav.listado, .uk-navbar-container {
   position: absolute;
   text-align: left;
   top: 100%;
   width: 100%;
-  left: 0;
+
 background: var(--background);
 /* el de antes */
 transform: scale(1,0);
@@ -97,6 +99,12 @@ transform: scale(1,0);
 transform-origin: top;
 transition: transform 400ms ease-in-out;
 /*esta bueno utilizar el transform, en lugar de display:none/display:block, porque te permite ajustar la transicion */
+}
+.uk-navbar-container{
+  left:0%;
+width: 100%;
+top:120px;
+
 }
 
 nav ul{
@@ -149,6 +157,7 @@ header li {
   float: left;
 }
 
+}
 header li a, .dropbtn {
   display: inline-block;
   color: white;
@@ -188,12 +197,8 @@ header li.dropdown {
   display: block;
 }
 
-header .uk-navbar-container{
-width: 30%;
-height: 40%;
-position: relative;
-top:90px;
-}
+
+
 
 /* Main */
 
