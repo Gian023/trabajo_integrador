@@ -72,7 +72,7 @@ header {
   left: 0;
   top: 0;
   margin-left: 1em;
-  height: 100%;
+  height: 50%;
   display: flex;
   align-items: center;
   /* lo posiciono en el medio */
@@ -187,15 +187,16 @@ header li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-header form{
 
+header .uk-navbar-container{
+width: 30%;
+height: 40%;
+position: relative;
+top:90px;
 }
 
 /* Main */
 
-main{
-
-}
 
 
 /* FOOTER */
@@ -223,7 +224,7 @@ footer .redes{
   width: 27%;
   display: flex;
   flex-direction: column;
-  justify-content: space-space-around;
+  justify-content: space-around;
 }
 footer div a{
   color: rgba(100, 100, 100, 0.8);
@@ -262,9 +263,6 @@ footer .contacto p{
   }
 
   nav {
-    // all: unset; /* this causes issues with Edge, since it's unsupported */
-
-    /* the following lines are not from my video, but add Edge support */
     position: relative;
     text-align: left;
     transition: none;
@@ -272,8 +270,6 @@ footer .contacto p{
     background: none;
     top: initial;
     left: initial;
-    /* end Edge support stuff */
-
     grid-column: 3 / 4;
     display: flex;
     justify-content: flex-end;
