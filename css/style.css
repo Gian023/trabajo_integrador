@@ -102,8 +102,9 @@ transition: transform 400ms ease-in-out;
 .uk-navbar-container{
   left:0%;
 width: 100%;
-bottom:20%;
-
+top:120px;
+transform-origin: top;
+transition: transform 700ms ease-in-out;
 
 }
 
@@ -257,57 +258,58 @@ footer .contacto p{
   .nav-toggle-label {
     display: none;
   }
-    header {
-      display: grid;
-      grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-    }
 
-    .logo {
-      grid-column: 2 / 3;
-    }
-
-    nav {
-      position: relative;
-      text-align: left;
-      transition: none;
-      transform: scale(1,1);
-      background: none;
-      top: initial;
-      left: initial;
-      grid-column: 3 / 4;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
-
-    nav ul {
-      display: flex;
-    }
-
-    nav li {
-      margin-left: 3em;
-      margin-bottom: 0;
-    }
-
-    nav a {
-      opacity: 1;
-      position: relative;
-    }
-
-    nav a::before {
-      content: '';
-      display: block;
-      height: 5px;
-      background: black;
-      position: absolute;
-      top: -.75em;
-      left: 0;
-      right: 0;
-      transform: scale(0, 1);
-      transition: transform ease-in-out 250ms;
-    }
-
-    nav a:hover::before {
-      transform: scale(1,1);
-    }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+}
