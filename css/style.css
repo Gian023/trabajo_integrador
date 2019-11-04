@@ -63,7 +63,6 @@ header {
   width: 100%;
 }
 
-
 .nav-toggle {
   display:none;
   /*esto va a hacer que el checkbox no se vea, y va a ser reemplazado por el span */
@@ -85,12 +84,12 @@ header {
 span{
   color:white;
   }
-
-nav.listado, .uk-navbar-container {
+nav {
   position: absolute;
   text-align: left;
   top: 100%;
   width: 100%;
+  left: 0;
 background: var(--background);
 /* el de antes */
 transform: scale(1,0);
@@ -98,13 +97,6 @@ transform: scale(1,0);
 transform-origin: top;
 transition: transform 400ms ease-in-out;
 /*esta bueno utilizar el transform, en lugar de display:none/display:block, porque te permite ajustar la transicion */
-}
-.uk-navbar-container{
-  left:0%;
-width: 100%;
-bottom:20%;
-
-
 }
 
 nav ul{
@@ -157,7 +149,6 @@ header li {
   float: left;
 }
 
-}
 header li a, .dropbtn {
   display: inline-block;
   color: white;
@@ -198,8 +189,7 @@ header li.dropdown {
 }
 header form{
 
-
-
+}
 
 /* Main */
 
@@ -261,28 +251,15 @@ footer .contacto p{
   .nav-toggle-label {
     display: none;
   }
-    header {
-      display: grid;
-      grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-    }
 
-    .logo {
-      grid-column: 2 / 3;
-    }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
 
-    nav {
-      position: relative;
-      text-align: left;
-      transition: none;
-      transform: scale(1,1);
-      background: none;
-      top: initial;
-      left: initial;
-      grid-column: 3 / 4;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
+  .logo {
+    grid-column: 2 / 3;
+  }
 
   nav {
     // all: unset; /* this causes issues with Edge, since it's unsupported */
@@ -303,30 +280,34 @@ footer .contacto p{
     align-items: center;
   }
 
-    nav li {
-      margin-left: 3em;
-      margin-bottom: 0;
-    }
-
-    nav a {
-      opacity: 1;
-      position: relative;
-    }
-
-    nav a::before {
-      content: '';
-      display: block;
-      height: 5px;
-      background: black;
-      position: absolute;
-      top: -.75em;
-      left: 0;
-      right: 0;
-      transform: scale(0, 1);
-      transition: transform ease-in-out 250ms;
-    }
-
-    nav a:hover::before {
-      transform: scale(1,1);
-    }
+  nav ul {
+    display: flex;
   }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+}
