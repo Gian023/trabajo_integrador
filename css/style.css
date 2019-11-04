@@ -182,19 +182,26 @@ header li.dropdown {
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
-header form{
-
+/* aca modifique el tamaño de la barra de busqueda */
+header .uk-navbar-container {
+border-radius: 15px;;
+width: 70%;
+height: 50%;
+margin: 0 15%;
+margin-top: 3%;
 }
 
 /* Main */
 
-main{
-
+main #titulos {
+color: rgba(255,255,255,0.7);
 }
 
 
@@ -220,10 +227,10 @@ footer #logo{
 }
 footer .redes{
   margin:2%;
-  width: 27%;
+  width: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: space-space-around;
+  justify-content: space-around;
 }
 footer div a{
   color: rgba(100, 100, 100, 0.8);
@@ -232,6 +239,7 @@ footer div a{
 footer a:hover {
   color: red;
   font-size: 1.1rem;
+  text-decoration: none;
 }
 footer .contacto{
   display: flex;

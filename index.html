@@ -16,13 +16,7 @@
   <body>
 
 <header>
-  <h1 class="logo">Logo</h1>
-    <nav>
-      <!-- <form class="busqueda" action="index.html" method="get">
-        <input type="search" name="" value="">
-        <button type="send" name="button">enviar</button>
-      </form> -->
-    </nav>
+  <h1 class="logo">Series2000</h1>
 
     <nav class="uk-navbar-container" uk-navbar>
         <div class="uk-navbar-left">
@@ -37,34 +31,30 @@
         </div>
     </nav>
 
-
-
-
     <input type="checkbox" id="nav-toggle" class="nav-toggle" name="" value="">
     <nav>
     <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                    <li> <a href="#discover">Discover</a></li>
-                    <li class="dropdown"> <a href="(2)generos.html" class="dropbtn">Genero</a>
-                      <ul class="dropdown-content">
-                        <li class="menu-item">  <a href="#accion">Accion y aventuras</a></li>
-                        <li class="menu-item"><a href="#anime">Anime</a></li>
-                        <li class="menu-item"><a href="#ciencia">Ciencia ficcion y fantasia</a></li>
-                        <li class="menu-item"><a href="#comedia">Comedia</a></li>
-                        <li class="menu-item"><a href="#deportes">Deportes y salud fisica</a></li>
-                        <li class="menu-item"><a href="#documentales">Documentales</a></li>
-                        <li class="menu-item"><a href="#drama">Drama</a></li>
-                        <li class="menu-item"><a href="#musica">Musica y musicales</a></li>
-                        <li class="menu-item"><a href="#infantil">Infantiles y familiares</a></li>
-                        <li class="menu-item"><a href="#terror">Terror</a></li>
-                        <li class="menu-item"><a href="#internacionales">Internacionales</a></li>
-                        <li class="menu-item"><a href="#latinoamericanas">Latinoamericanas</a></li>
-                        <li class="menu-item"><a href="#premiadas">Premiadas</a></li>
-                        <li class="menu-item"><a href="#romanticas">Romenticas</a></li>
-                        <li class="menu-item"><a href="#suspenso">Suspenso</a></li>
-                      </ul>
-                      </li>
-            </ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#discover">Descubrir</a></li>
+      <li class="dropdown"> <a href="(2)generos.html" class="dropbtn">Genero</a>
+        <ul class="dropdown-content">
+          <li class="menu-item">  <a href="#accion">Accion y aventuras</a></li>
+          <li class="menu-item"><a href="#anime">Anime</a></li>
+          <li class="menu-item"><a href="#ciencia">Ciencia ficcion y fantasia</a></li>
+          <li class="menu-item"><a href="#comedia">Comedia</a></li>
+          <li class="menu-item"><a href="#deportes">Deportes y salud fisica</a></li>
+          <li class="menu-item"><a href="#documentales">Documentales</a></li>
+          <li class="menu-item"><a href="#drama">Drama</a></li>
+          <li class="menu-item"><a href="#musica">Musica y musicales</a></li>
+          <li class="menu-item"><a href="#infantil">Infantiles y familiares</a></li>
+          <li class="menu-item"><a href="#terror">Terror</a></li>
+          <li class="menu-item"><a href="#internacionales">Internacionales</a></li>
+          <li class="menu-item"><a href="#latinoamericanas">Latinoamericanas</a></li>
+          <li class="menu-item"><a href="#premiadas">Premiadas</a></li>                        <li class="menu-item"><a href="#romanticas">Romenticas</a></li>
+          <li class="menu-item"><a href="#suspenso">Suspenso</a></li>
+        </ul>
+      </li>
+    </ul>
 </nav>
 <label for="nav-toggle" class="nav-toggle-label">
 <span> <i class="fas fa-bars"></i></span>
@@ -74,23 +64,9 @@
 
 <!-- MAIN -->
     <main>
-      <br>
-      <h1>Página 1 - Home</h1>
-      <br>
-      <p>
-        La home de su sitio debe contar al menos con una sección principal que cuente al menos con:
-      </p>
-      <p>
-        <p>• Listado de las series más populares (Queda a criterio de los alumnos cuántas series mostrar)</p>
-        <p>• Listado de las series con mayor puntaje (Queda a criterio de los alumnos cuántas series mostrar)</p>
-        <p>• Listado de las series que se dan al aire hoy (Queda a criterio de los alumnos cuántas series mostrar)</p>
-        <p>Nótese que al clickear en cualquiera de las series debe redirigir al detalle de esa serie [Ver página 5]</p>
-        <p>Punto extra: Se valora que las series se muestren con su poster y se valora más aún que figuren en un carrousel.</p>
-      <br><br><br>
-
-    <!-- ////////////////////////////////////////// -->
+    <br><br><br><br><br><br>
 <!-- Más populares -->
-    <h2>Más populares</h2>
+    <h2 id="titulos">Más populares</h2>
     <div uk-slider>
 
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
@@ -108,7 +84,7 @@
 
     </div>
 <!-- Mayor puntaje -->
-    <h2>Mayor puntaje</h2>
+    <h2 id="titulos">Mayor puntaje</h2>
     <div uk-slider>
 
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
@@ -127,7 +103,7 @@
     </div>
 
 <!-- Al aire -->
-    <h2>Al aire</h2>
+    <h2 id="titulos">Al aire</h2>
     <div uk-slider>
 
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
