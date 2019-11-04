@@ -239,7 +239,7 @@ footer div a{
 footer a:hover {
   color: red;
   font-size: 1.1rem;
-  text-decoration: none;
+  text-decoration: none;``
 }
 footer .contacto{
   display: flex;
