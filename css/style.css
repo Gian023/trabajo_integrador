@@ -102,7 +102,7 @@ transition: transform 400ms ease-in-out;
 .uk-navbar-container{
   left:0%;
 width: 100%;
-bottom:20%;
+top:120px;
 transform-origin: top;
 transition: transform 700ms ease-in-out;
 
