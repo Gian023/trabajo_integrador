@@ -28,7 +28,7 @@ body{
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 :root {
-  --background: rgba(0, 214, 170, .85);
+  --background: rgba(56, 240, 148, .85);
 }
 
 *, *::before, *::after {
@@ -44,8 +44,7 @@ body {
 
 .content {
   height: 200vh;
-  background-image: url(//unsplash.it/1000/1000);
-  background-color: #333;
+  background-color:  #38f094;
   background-blend-mode: multiply;
   background-size: cover;
   display: grid;
@@ -90,10 +89,10 @@ nav {
   top: 100%;
   width: 100%;
   left: 0;
-background: var(--background);
+background:  var(--background);
 /* el de antes */
 transform: scale(1,0);
-/*se esconde todo lo que esta dentro de nav, con el 0 se achico al maximo la navegacion */
+/* se esconde todo lo que esta dentro de nav, con el 0 se achico al maximo la navegacion */
 transform-origin: top;
 transition: transform 400ms ease-in-out;
 /*esta bueno utilizar el transform, en lugar de display:none/display:block, porque te permite ajustar la transicion */
@@ -267,6 +266,8 @@ footer .contacto p{
 
   .logo {
     grid-column: 2 / 3;
+    opacity: 1;
+    width: 80%;
   }
 
   nav {
