@@ -250,7 +250,7 @@ footer .contacto p{
     color: rgba(100, 100, 100, 0.8);
 }
 
-/* MEDIA */
+/* --------------------- MEDIA QUERY --------------------*/
 
 /*voy a hacer una media para pantallas mas grandes que un celular */
 /* Tablet / Celu */
@@ -319,4 +319,13 @@ footer .contacto p{
   nav a:hover::before {
     transform: scale(1,1);
   }
+}
+/* Saco las medidas del modelo del parcial */
+/* QUERY Celular */
+@media (max-width: 420px) {
+
+}
+/* QUERY TABLET */
+@media (min-width: 421px) and (max-width: 800px){
+
 }
