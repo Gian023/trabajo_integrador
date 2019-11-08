@@ -11,9 +11,10 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
      var pel = datos.results;
 
      for (var i=0; i<pel.length; i++){
-       sliderUl.innerHTML += '<li>' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</li>'
+       sliderUl.innerHTML += '<li><a href="(5)info_serie.html"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
      }
    })
+   //
    /*fech de top rated */
    fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=7246c48f98d8db92d443b21af0633a14&language=en-US&page=1")
      .then(function(respuesta){
