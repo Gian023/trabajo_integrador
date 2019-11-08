@@ -193,8 +193,8 @@ header .uk-navbar-container {
 border-radius: 15px;;
 width: 70%;
 height: 50%;
-margin: 0 15%;
-margin-top: 3%;
+margin: 0 40%;
+margin-top: 5%;
 }
 
 /* Main */
@@ -207,7 +207,12 @@ main #titulos {
 color: rgba(255,255,255,0.7);
 
 }
-
+.logo {
+  position: relative;
+  right: 5%;
+  opacity: 1;
+  width: 40%;
+}
 
 /* FOOTER */
 footer{
