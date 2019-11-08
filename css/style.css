@@ -218,8 +218,8 @@ footer{
   width: 100%;
   background: gray;
   background: rgba(0,0,0,0.5);
-  /* display: flex;
-  flex-wrap: nowrap; */
+  display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   /* position: absolute;
   bottom: 0; */
@@ -339,16 +339,22 @@ footer h2{
 /* QUERY TABLET */
 @media (min-width: 641px) and (max-width: 800px){
 
-
 /* FOOTER */
-footer .DB p{
-  display: none;
+  footer .DB p{
+    display: none;
+  }
+  footer #logo{
+    width: 80%;
+    margin-top:5%;
+  }
+  footer .contacto{
+    display: none;
+  }
+  footer .redes{
+    width: 50%;
+  }
 }
-}
-footer #logo{
-  width: 80%;
-  margin-top:5%;
-}
+
 /* QUERY Celular */
 @media (max-width: 640px) {
 
@@ -359,4 +365,11 @@ footer #logo{
   footer #logo{
     width: 100%;
     margin-top:5%;
+  }
+  footer .contacto{
+    display: none;
+  }
+  footer .redes{
+    width: 50%;
+  }
 }
