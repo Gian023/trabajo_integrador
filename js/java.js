@@ -1,4 +1,8 @@
 window.onload = function(){
+  // BUSCADOR
+  document.querySelector("form").addEventListener("click", function(event){
+
+  });
 // nada
 // Api's
 fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false")
@@ -11,7 +15,7 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
      var pel = datos.results;
 
      for (var i=0; i<pel.length; i++){
-       sliderUl.innerHTML += '<li><a href="(5)info_serie.html"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
+       sliderUl.innerHTML += '<li id="click.pelis"><a href="(5)info_serie.html"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
      }
    })
    //
@@ -59,7 +63,11 @@ fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=c0e01d0df95b98b689dcb3
     div.innerHTML += '<li>' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</li>'
   }
 })
-
+var li_click= document.querySelector("#click.pelis")
+var detalle_película =
+li_click.onclick = function () {
+  detalle_película
+}
 
 
 
