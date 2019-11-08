@@ -43,9 +43,21 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
        ul.innerHTML += '<li>' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</li>'
      }
    })
+   console.log("hola");
+// GENEROSSSSSSS
+fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
+.then(function(respuesta){
+ return respuesta.json();
+})
+.then(function(datos){
+ console.log(datos);
+  var div = document.querySelector(".gnre");
+  var pel = datos.results;
 
-
-
+  for (var i=0; i<pel.length; i++){
+    div.innerHTML += '<li>' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</li>'
+  }
+})
 
 
 
