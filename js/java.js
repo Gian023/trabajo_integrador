@@ -15,7 +15,7 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
      var pel = datos.results;
 
      for (var i=0; i<pel.length; i++){
-       sliderUl.innerHTML += '<li id="click.pelis"><a href="(5)info_serie.html"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
+       sliderUl.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id='+ datos.results[i].id +'"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
      }
    })
    //
@@ -49,30 +49,11 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
      }
    })
    console.log("hola");
-// GENEROSSSSSSS
-fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
-.then(function(respuesta){
- return respuesta.json();
-})
-.then(function(datos){
- console.log(datos);
-  var div = document.querySelector(".gnre");
-  var pel = datos.results;
-
-  for (var i=0; i<pel.length; i++){
-    div.innerHTML += '<li>' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</li>'
-  }
-})
 
 
 // agarrar info de la película
-var li_click= document.querySelector("#click.pelis")
-var detalle_película =
 
-li_click.onclick = funcion_info;
-function funcion_info() {
-  detalle_película
-}
+
 
 
 
