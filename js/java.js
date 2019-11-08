@@ -63,9 +63,14 @@ fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=c0e01d0df95b98b689dcb3
     div.innerHTML += '<li>' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</li>'
   }
 })
+
+
+// agarrar info de la película
 var li_click= document.querySelector("#click.pelis")
 var detalle_película =
-li_click.onclick = function () {
+
+li_click.onclick = funcion_info;
+function funcion_info() {
   detalle_película
 }
 
