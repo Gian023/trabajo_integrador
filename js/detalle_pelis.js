@@ -14,22 +14,22 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=c0e01d0df95b98b689dcb3
   var info_conteiner = document.querySelector(".info_conteiner");
   var foto_conteiner = document.querySelector(".foto_conteiner");
 
-  info_conteiner.innerHTML += '<h1>'+  datos.name + '</h1>'
+  info_conteiner.innerHTML += '<h2><strong>'+  datos.name + '</strong></h2>'
 
   var gnre = datos.genres
   var losgeneros ="";
   for (var i=0; i<gnre.length; i++){
-    losgeneros += ' <a href="series_xgenero.html?'+ datos.genres[i].id+'">' + datos.genres[i].name + '</a> |'
+    losgeneros += ' <a href="series_xgenero.html?'+ datos.genres[i].id+'">' + datos.genres[i].name + '</a> '
 
   }
-  info_conteiner.innerHTML += '<h2>Géneros: ' +  losgeneros + '</h2>'
+  info_conteiner.innerHTML += '<h3><strong>Géneros: </strong>' +  losgeneros + '</h3>'
 
-  info_conteiner.innerHTML += '<h2>Lenguaje original: '+  datos.original_language + '</h2>'
+  info_conteiner.innerHTML += '<h3><strong>Lenguaje original: </strong>'+  datos.original_language + '</h3>'
 
-  info_conteiner.innerHTML += '<h2>Sinopsis:'+  ' <p>' + datos.overview + '</p></h2>'
+  info_conteiner.innerHTML += '<h3><strong>Sinopsis:</strong>'+  ' <p><em>' + datos.overview + '</em></p></h3>'
 
   // fecha de estreno
-  info_conteiner.innerHTML += '<h2>Fecha de estreno: '+  datos.first_air_date + '</h2>'
+  info_conteiner.innerHTML += '<h3><strong>Fecha de estreno: </strong>'+  datos.first_air_date + '</h3>'
 
   // poster
   foto_conteiner.innerHTML = '<img src="https://image.tmdb.org/t/p/w500/'+ datos.poster_path + '">'
@@ -65,7 +65,6 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "/recommendations?api_key=c0e01d
        recomen.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id='+ datos.results[i].id +'"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
      }
    })
-
 
 
 
