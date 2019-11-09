@@ -1,3 +1,4 @@
+
 window.addEventListener("load",function(){
 var queryString = location.search; //Capturamos la query string del navegador
 
@@ -13,21 +14,17 @@ fetch(url)
   .then(function(datos){
   var destino = document.querySelector(".resultados");
   var datosFinales = datos.results;
-  var li = ""
+  // var li = ""
   console.log(datos);
 
   for(var i=0; i<datosFinales.length; i++){
-    li += "<li>"
-    li += datos.results[i].original_name + i
-    li += "</li>"
+    destino.innerHTML+= '<li><a  id="click_pelis" href="info_serie.html?id='+ datos.results[i].original_name+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
   }
 
-  destino.innerHTML = li //Inlcuimos todos los li del for en el contenedor html que capturamos en la línea 14.
 
 
 
 })
-
 
 
 
