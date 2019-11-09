@@ -5,12 +5,6 @@ var querystring = location.search;
 var query2 = new URLSearchParams(querystring)
 var id = query2.get("id")
 
-console.log(querystring);
-console.log(query2);
-console.log(id);
-
-
-
 fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
 .then(function(respuesta){
  return respuesta.json();
@@ -18,22 +12,28 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=c0e01d0df95b98b689dcb3
 .then(function(datos){
  console.log(datos);
   var info_conteiner = document.querySelector(".info_conteiner");
+  var foto_conteiner = document.querySelector(".foto_conteiner");
 
   info_conteiner.innerHTML += '<h1>'+  datos.name + '</h1>'
 
   var gnre = datos.genres
   var losgeneros ="";
-  var losgenerosID = "";
   for (var i=0; i<gnre.length; i++){
-    losgeneros += ' <a href="series_xgenero.html?'+datos.genres[i].id+'">' + datos.genres[i].name + '</a> |'
+    losgeneros += ' <a href="series_xgenero.html?'+ datos.genres[i].id+'">' + datos.genres[i].name + '</a> |'
 
   }
   info_conteiner.innerHTML += '<h2>Géneros: ' +  losgeneros + '</h2>'
 
-  // info_conteiner.innerHTML += '<h3>Generos:'+  datos.genres + '</h3>'
-})
+  info_conteiner.innerHTML += '<h2>Lenguaje original: '+  datos.original_language + '</h2>'
 
-//
+  info_conteiner.innerHTML += '<h2>Sinopsis:'+  ' <p>' + datos.overview + '</p></h2>'
+
+  // fecha de estreno
+  info_conteiner.innerHTML += '<h2>Fecha de estreno: '+  datos.first_air_date + '</h2>'
+
+  // poster
+  foto_conteiner.innerHTML = '<img src="https://image.tmdb.org/t/p/w500/'+ datos.poster_path + '">'
+})
 
 
 

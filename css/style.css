@@ -157,6 +157,8 @@ main{
 }
 main #titulos {
 color: rgba(255,255,255,0.7);
+padding-top: 10%;
+
 
 }
 .logo {
@@ -212,7 +214,7 @@ footer .contacto{
 footer .contacto p{
     color: rgba(100, 100, 100, 0.8);
 }
-footer h2{
+footer .redes h2, .contacto h2{
   color: rgba(250,250,250,0.67)
 }
 
@@ -230,6 +232,7 @@ footer h2{
   header {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    margin-bottom: 10%;
   }
 
   .logo {
