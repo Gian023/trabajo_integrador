@@ -18,7 +18,7 @@ fetch(url)
   console.log(datos);
 
   for(var i=0; i<datosFinales.length; i++){
-    destino.innerHTML+= '<li><a  id="click_pelis" href="info_serie.html?id='+ datos.results[i].original_name+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
+    destino.innerHTML+= '<li><a  id="click_pelis" href="info_serie.html?id='+ datos.results[i].id+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
   }
 
 
