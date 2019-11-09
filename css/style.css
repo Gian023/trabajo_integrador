@@ -157,9 +157,10 @@ main{
 }
 main #titulos {
 color: rgba(255,255,255,0.7);
-padding-top: 10%;
-
-
+margin-left: 2%;
+}
+main .primero{
+  padding-top: 15%;
 }
 .logo {
   position: relative;
