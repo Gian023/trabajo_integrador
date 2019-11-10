@@ -13,53 +13,34 @@
   </head>
   <body>
 
-<header>
-  <img class="logo" src="img/serieedd.png" alt="">
+    <header>
+      <a href="index.html"><img class="logo" src="img/serieedd.png" alt=""></a>
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-left">
 
-    <nav class="uk-navbar-container" uk-navbar>
-        <div class="uk-navbar-left">
+                <div class="uk-navbar-item">
+                    <form class="uk-search uk-search-navbar" action="resultados.html" method="get">
+                        <span uk-search-icon></span>
+                        <input class="uk-search-input" type="search" placeholder="Search..." name="busqueda">
+                    </form>
+                </div>
 
-            <div class="uk-navbar-item">
-                <form class="uk-search uk-search-navbar">
-                    <span uk-search-icon></span>
-                    <input class="uk-search-input" type="search" placeholder="Search...">
-                </form>
             </div>
+        </nav>
 
-        </div>
-    </nav>
-
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" name="" value="">
-    <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="#discover">Descubrir</a></li>
-      <li class="dropdown"> <a href="(2)generos.html" class="dropbtn">Genero</a>
-        <ul class="dropdown-content">
-          <li class="menu-item">  <a href="#accion">Accion y aventuras</a></li>
-          <li class="menu-item"><a href="#anime">Anime</a></li>
-          <li class="menu-item"><a href="#ciencia">Ciencia ficcion y fantasia</a></li>
-          <li class="menu-item"><a href="#comedia">Comedia</a></li>
-          <li class="menu-item"><a href="#deportes">Deportes y salud fisica</a></li>
-          <li class="menu-item"><a href="#documentales">Documentales</a></li>
-          <li class="menu-item"><a href="#drama">Drama</a></li>
-          <li class="menu-item"><a href="#musica">Musica y musicales</a></li>
-          <li class="menu-item"><a href="#infantil">Infantiles y familiares</a></li>
-          <li class="menu-item"><a href="#terror">Terror</a></li>
-          <li class="menu-item"><a href="#internacionales">Internacionales</a></li>
-          <li class="menu-item"><a href="#latinoamericanas">Latinoamericanas</a></li>
-          <li class="menu-item"><a href="#premiadas">Premiadas</a></li>
-          <li class="menu-item"><a href="#romanticas">Romenticas</a></li>
-          <li class="menu-item"><a href="#suspenso">Suspenso</a></li>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" name="" value="">
+        <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#discover">Descubrir</a></li>
+          <li class="dropdown"> <a href="generos.html" class="dropbtn">Genero</a></li>
         </ul>
-      </li>
-    </ul>
-</nav>
-<label for="nav-toggle" class="nav-toggle-label">
-<span> <i class="fas fa-bars"></i></span>
-</label>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+    <span> <i class="fas fa-bars"></i></span>
+    </label>
 
-</header>
+    </header>
 <h1>Generos</h1>
 <div id="myDropdown" class="dropdown-content">
   <a href="#inicio">Inicio</a>
