@@ -12,7 +12,7 @@ fetch(url)
     return respuesta.json();
   })
   .then(function(datos){
-  var destino = document.querySelector(".resultados");
+  var destino = document.querySelector(".resultados-wrapper");
   var datosFinales = datos.results;
   // var li = ""
   console.log(datos);

@@ -1,19 +1,21 @@
-div .resultados_wrapper {
-display: flex;
-flex-wrap: wrap;
-overflow: hidden;
-
-}
-ul .resultados{
+.resultados_wrapper {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   width:100%;
+
+  flex-wrap: wrap;
+
 }
-#click_pelis img{
+#click_pelis {
 width: 30%;
-display: block;
-margin: auto;
+
 }
+
+
+
+
+/* media */
 @media (min-width: 451px) and (max-width: 768px){
 
   #click_pelis img {
