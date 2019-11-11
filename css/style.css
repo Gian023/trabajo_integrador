@@ -208,11 +208,17 @@ footer .redes{
 }
 footer div a{
   color: rgba(100, 100, 100, 0.8);
+  font-size: 1.1rem;
+}
+footer .contacto p{
+  color: rgba(100, 100, 100, 0.8);
+  font-size: 1.1rem;
 }
 
 /* hover */
 footer a:hover {
   color: red;
+  text-decoration:none;
 }
 footer .contacto{
   display: flex;

@@ -35,12 +35,28 @@ main .trailer_conteiner{
 main .trailer_conteiner iframe{
   margin-bottom: 5%;
 }
+/* boton */
+button{
+  margin: 5% auto;
+  background-color: rgba(0,0,0,0.1);
+  font-size: 1.3rem;
+  border-radius: 25px;
+  border: solid 3px rgba(56, 240, 148, .85);
+  padding: 1%;
+  color: rgba(255, 255, 255, 0.7);
+}
+button:hover{
+    color: rgba(255, 255, 255, 1);
+    font-size: 1.5rem;
+    background-color: rgba(255,255,255,0.1);
+}
 
 /* recomendaciones */
 main .Recomendaciones #titulos{
    width: 95%;
    margin-bottom: 2%;
  }
+
 
 
  /* QUERY TABLET */
@@ -53,4 +69,4 @@ main .Recomendaciones #titulos{
    width: 95%;
   }
 
-  }
+}
