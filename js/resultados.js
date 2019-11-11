@@ -14,7 +14,10 @@ fetch(url)
   .then(function(datos){
   var destino = document.querySelector(".resultados-wrapper");
   var datosFinales = datos.results;
-  // var li = ""
+  var titulo = document.querySelector(".primero");
+
+  titulo.innerText = busqueda;
+
   console.log(datos);
 
   for(var i=0; i<datosFinales.length; i++){
