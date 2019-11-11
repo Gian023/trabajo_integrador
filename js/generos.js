@@ -9,11 +9,11 @@ fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=c0e01d0df95b98b689dcb3
 })
 .then(function(datos){
  console.log(datos);
-  var div = document.querySelector(".gnre");
-  var gnre = datos.generes;
+  var div = document.querySelector(".generos_container");
+  var gnre = datos.genres;
 
-  for (var i=1; i<16; i++){
-    div.innerHTML += '<li><a href="#">'+  datos.generes[i].name + '</a>+ </li>'
+  for (var i=0; i<gnre.length; i++){
+    div.innerHTML += '<li><a href="series_xgenero.html?id='+ datos.genres[i].id +'">'+  datos.genres[i].name + '</a></li>'
   }
 })
 
