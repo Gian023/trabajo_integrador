@@ -1,0 +1,12 @@
+main .contenedor_g{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main .contenedor_g li {
+width: 19%;
+}
+main{
+  
+}
