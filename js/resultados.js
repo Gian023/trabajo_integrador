@@ -12,7 +12,7 @@ fetch(url)
     return respuesta.json();
   })
   .then(function(datos){
-  var destino = document.querySelector(".resultados-wrapper");
+  var destino = document.querySelector(".resultados");
   var datosFinales = datos.results;
   var titulo = document.querySelector(".primero");
 
@@ -21,7 +21,7 @@ fetch(url)
   console.log(datos);
 
   for(var i=0; i<datosFinales.length; i++){
-    destino.innerHTML+= '<li><a  id="click_pelis" href="info_serie.html?id='+ datos.results[i].id+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
+    destino.innerHTML+= '<li><a href="info_serie.html?id='+ datos.results[i].id+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
   }
 
 
