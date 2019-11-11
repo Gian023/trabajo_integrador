@@ -80,7 +80,7 @@ header {
 span{
   color:white;
   }
-nav {
+nav  {
   position: absolute;
   text-align: left;
   top: 100%;
@@ -133,7 +133,15 @@ nav ul{
  /*el segundo nos permite poner el tiempo de tardanza*/
 }
 
-header li a:hover, .dropdown:hover .dropbtn {
+.nav-toggle:checked ~ nav {
+  opacity: 1;/*esto permite que vaya apareciendo el textoo */
+ transition: opacity 250ms ease-in-out 250ms;
+ /*cuando ya esta checkeado comienza el efecto */
+ /*el segundo nos permite poner el tiempo de tardanza*/
+}
+
+
+ header li a:hover /* .dropdown:hover .dropbtn */ {
   background-color: red;
   list-style: none;
 }
@@ -291,8 +299,9 @@ footer .redes h2, .contacto h2{
   nav a:hover::before {
     transform: scale(1,1);
   }
-}
 
+
+}
 /* QUERY TABLET */
 @media (min-width: 641px) and (max-width: 800px){
 
