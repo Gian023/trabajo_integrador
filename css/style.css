@@ -1,12 +1,10 @@
-/* importo el tipo de fuente */
 @import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
-/* href="https://fonts.googleapis.com/css?family=Oswald&display=swap" */
+/* importo el tipo de fuente */
 
-/* me aseguro que las medidas de los elementos, son las que defino */
 *{box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-}
+}/* me aseguro que las medidas de los elementos, son las que defino */
 
 body{
   font-family:  sans-serif;
