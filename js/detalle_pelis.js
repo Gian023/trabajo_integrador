@@ -19,7 +19,7 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=c0e01d0df95b98b689dcb3
   var gnre = datos.genres
   var losgeneros ="";
   for (var i=0; i<gnre.length; i++){
-    losgeneros += ' <a href="series_xgenero.html?'+ datos.genres[i].id+'">' + datos.genres[i].name + '</a> '
+    losgeneros += ' <a href="series_xgenero.html?id='+ datos.genres[i].id+'">' + datos.genres[i].name + '</a> '
 
   }
   info_conteiner.innerHTML += '<h3><strong>Géneros: </strong>' +  losgeneros + '</h3>'

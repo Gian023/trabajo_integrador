@@ -13,7 +13,7 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
 })
 .then(function(datos){
  console.log(datos);
-  var div = document.querySelector(".contenedor_g");
+  var div = document.querySelector(".ul_generos");
   var series = datos.total_results;
   var titulo = document.querySelector("#titulos");
   // titulo.innerHTML =;
