@@ -50,6 +50,27 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "/videos?api_key=c0e01d0df95b98b
 
      }
    })
+//----------- Boton --------------------
+var recom = document.querySelector(".Recomendaciones");
+var btn = document.querySelector("#boton-recom");
+
+btn.onclick = function (){
+  recom.style.display = "block";
+  btn.onclick = function (){
+    recom.style.display = "none";
+    btn.onclick = function (){
+      recom.style.display = "block";
+      btn.onclick = function (){
+        recom.style.display = "none";
+      }
+    }
+  }
+}
+
+
+
+
+
 
 /////////////////// RECOMENDADOS
 fetch("https://api.themoviedb.org/3/tv/" + id + "/recommendations?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US&page=1")

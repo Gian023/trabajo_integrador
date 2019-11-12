@@ -47,7 +47,7 @@ button{
 }
 button:hover{
     color: rgba(255, 255, 255, 1);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     background-color: rgba(255,255,255,0.1);
 }
 
@@ -55,6 +55,9 @@ button:hover{
 main .Recomendaciones #titulos{
    width: 95%;
    margin-bottom: 2%;
+ }
+ main .Recomendaciones{
+   display: none;
  }
 
 
