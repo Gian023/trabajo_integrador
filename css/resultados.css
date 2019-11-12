@@ -23,10 +23,6 @@ width: 100%;
   text-transform: capitalize;
 }
 
-/* hover */
-main .div-resultados .resultados li:hover {
-border: solid 3px rgba(56, 240, 148, .55);
-}
 
 
 /* media */

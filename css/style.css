@@ -167,7 +167,7 @@ main #titulos {
 color: rgba(255,255,255,0.7);
 margin-left: 2%;
 }
-main .primero{
+.primero{
   padding-top: 15%;
 }
 .logo {
@@ -175,6 +175,10 @@ main .primero{
   right: 5%;
   opacity: 1;
   width: 40%;
+}
+main div ul li:hover img{
+  border: solid 3px rgba(56, 240, 148, .85);
+  border-radius: 20px;
 }
 
 /* FOOTER */
