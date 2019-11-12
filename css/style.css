@@ -8,58 +8,43 @@
 
 body{
   font-family:  sans-serif;
-  /* "Oswald"; */
+	background-color: #222;
+  color: white;
   font-size: 1rem;
-  /* text-transform: uppercase; */
   margin: 0;
   border: 0;
   padding: 0;
   width: 100%;
-  /* display: flex; */
-  position: relative;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
-  color: white;
-  background-color: rgba(0,0,0,0.9);
-  margin: 0;
-	background: #222;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
 }
-/* HEADER */
 
+/*---------- HEADER -----------*/
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 :root {
   --background: rgba(56, 240, 148, .85);
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-.content {
+/* .content {
   height: 200vh;
   background-color:  #38f094;
   background-blend-mode: multiply;
   background-size: cover;
   display: grid;
   place-items: center;
-}
+} */
 
 /* estilo de navegacion */
 header {
   background: var(--background);
-  /* vuelve al color background de antes */
   text-align: center;
   position: fixed;
-  z-index: 999;
-  /* para que este arriba de todo */
+  z-index: 999; /* para que este arriba de todo */
   width: 100%;
 }
 
 .nav-toggle {
-  display:none;
-  /*esto va a hacer que el checkbox no se vea, y va a ser reemplazado por el span */
+  display:none; /*esto va a hacer que el checkbox no se vea, y va a ser reemplazado por el span */
 }
 .nav-toggle-label {
   position: absolute;
@@ -75,7 +60,7 @@ header {
   display: block;
   position:relative;
 }
-span{
+span {
   color:white;
   }
 nav  {
@@ -84,13 +69,11 @@ nav  {
   top: 100%;
   width: 100%;
   left: 0;
-background:  var(--background);
-/* el de antes */
-transform: scale(1,0);
-/* se esconde todo lo que esta dentro de nav, con el 0 se achico al maximo la navegacion */
-transform-origin: top;
-transition: transform 400ms ease-in-out;
-/*esta bueno utilizar el transform, en lugar de display:none/display:block, porque te permite ajustar la transicion */
+  background:  var(--background);/* el de antes */
+  transform: scale(1,0); /* se esconde todo lo que esta dentro de nav, con el 0 se achico al maximo la navegacion */
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  /*esta bueno utilizar el transform, en lugar de display:none/display:block, porque te permite ajustar la transicion */
 }
 
 nav ul{
