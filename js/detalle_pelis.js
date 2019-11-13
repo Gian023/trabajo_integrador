@@ -89,63 +89,8 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "/recommendations?api_key=c0e01d
 
 
 
-   // 
-   // window.onload = function() {
-   //
-   //   //Paso 1: Leo Storage
-   //
-   //   var recuperoStorage = localStorage.getItem("seriesFavoritos");
-   //
-   //   // Si todavía no tenía gifs favoritos
-   //   if (recuperoStorage == null) {
-   //     // Creo una lista vacia
-   //     seriesFavoritos = [];
-   //   } else {
-   //     // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
-   //     seriesFavoritos = JSON.parse(recuperoStorage);
-   //   }
-   //
-   //   var datos = new URLSearchParams(location.search);
-   //   var idSerie = datos.get("idGif");
-   //
-   //   if (seriesFavoritos.includes(idSerie)) {
-   //     document.querySelector("button").innerHTML = "QUITAR DE FAVORITOS";
-   //   }
-   //
-   //
-   //
-   //   fetch("https://api.giphy.com/v1/gifs/" + idSerie + "?api_key=lp7wQ6914aPRmDI6HePRPpQeZXyxLFkU")
-   //     .then(function(response) {
-   //       return response.json();
-   //     })
-   //     .then(function(gif) {
-   //       document.querySelector("h1").innerHTML = gif.data.title;
-   //       document.querySelector("img").src = gif.data.images.original.url;
-   //     })
-   //
-   //     document.querySelector("button").onclick = function() {
-   //
-   //
-   //       //Paso 2: Modificar la informacion
-   //       // Si el gif ya era favorito
-   //       if (gifsFavoritos.includes(idGif)) {
-   //         // Lo quito
-   //         var index = gifsFavoritos.indexOf(idGif);
-   //         gifsFavoritos.splice(index, 1);
-   //         document.querySelector("button").innerHTML = "AGREGAR FAVORITO";
-   //       } else {
-   //         //Lo agrego
-   //         gifsFavoritos.push(idGif);
-   //         document.querySelector("button").innerHTML = "QUITAR DE FAVORITOS";
-   //       }
-   //
-   //
-   //       //Paso 3: Escribir en storage
-   //       var infoParaStorage = JSON.stringify(gifsFavoritos);
-   //       localStorage.setItem("gifsFavoritos", infoParaStorage);
-   //       console.log(localStorage);
-   //     }
-   // }
+
+
 
 
 

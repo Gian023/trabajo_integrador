@@ -21,28 +21,232 @@ body{
 
 /*---------- HEADER -----------*/
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
-:root {
-  --background: rgba(56, 240, 148, .85);
-}
-
-/* .content {
-  height: 200vh;
-  background-color:  #38f094;
-  background-blend-mode: multiply;
-  background-size: cover;
-  display: grid;
-  place-items: center;
-} */
-
 /* estilo de navegacion */
 header {
-  background: var(--background);
-  text-align: center;
+  background: rgba(56, 240, 148, .85);
   position: fixed;
   z-index: 999; /* para que este arriba de todo */
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
+header .logo {
+  opacity: 1;
+  left: 0%;
+  width: 60%;
+  margin: 7%;
+}
+header li a:hover {
+  padding: 2%;
+  background-color: red;
+  list-style: none;
+}
+#nav-toggle{
+  display: none;
+}
+header .busqueda{
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+/* aca modifique el tamaño de la barra de busqueda */
+header .uk-navbar-container {
+border-radius: 17px;;
+width: 50%;
+margin-top: 5%;
+}
+header {
+  
+}
+header .uk-search-input{
+  width: 50%;;
+}
+
+/* modal */
+header #boton_modal_busqueda{
+  background-color: rgba(56, 240, 148, .60);
+  border-radius: 20px;
+  border: solid 2px white;
+  height: 10%;
+  padding: 1%;
+  margin: 2%;
+  color: white;
+  font-size: 0.7rem;
+  z-index: 34;
+}
+/* LO QUE ESTABA EN EL QUERY- */
+.nav-toggle-label {
+  display: none;
+}
+
+/* header {
+  display: grid;
+  grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  margin-bottom: 10%;
+} */
+
+
+
+nav {
+  /* // all: unset; */
+  /* position: relative;
+  text-align: left;
+  transition: none;
+  transform: scale(1,1);
+  background: none;
+  top: initial;
+  left: initial; */
+  /* end Edge support stuff */
+
+  /* grid-column: 3 / 4; */
+  /* display: flex;
+  justify-content: flex-end; */
+  /* align-items: center; */
+  /* a partir de aca hago yo///////////////////// */
+  margin-right: 2%;
+  margin-top:5%;
+  z-index: 34;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin-left: 3em;
+  margin-bottom: 0;
+
+}
+nav ul li a{
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+/* nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background: black;
+  position: absolute;
+  top: -.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+} */
+
+/* nav a:hover::before {
+  transform: scale(1,1);
+} */
+
+
+/* ---------- Main ---------- */
+main{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* position: absolute;
+  top: 10%; */
+}
+main #titulos {
+color: rgba(255,255,255,0.7);
+margin-left: 2%;
+}
+.primero{
+  padding-top: 15%;
+}
+main div ul li:hover img{
+  border: solid 3px rgba(56, 240, 148, .85);
+  border-radius: 20px;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  width: 100%;
+  background: gray;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  /* position: absolute;
+  bottom: 0; */
+}
+footer .DB{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  font-size: 0.8rem;
+  margin: 2%;
+}
+footer #logo{
+  width: 40%;
+  margin-top:5%;
+}
+footer .redes{
+  margin:2%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer div a{
+  color: rgba(100, 100, 100, 0.8);
+  font-size: 1.1rem;
+}
+footer .contacto p{
+  color: rgba(100, 100, 100, 0.8);
+  font-size: 1.1rem;
+}
+
+/* hover */
+footer a:hover {
+  color: red;
+  text-decoration:none;
+}
+footer .contacto{
+  display: flex;
+  flex-direction: column;
+  margin:2%;
+  width: 20%;
+}
+footer .contacto p{
+    color: rgba(100, 100, 100, 0.8);
+}
+footer .redes h2, .contacto h2{
+  color: rgba(250,250,250,0.67)
+}
+
+
+
+/* --------------------- MEDIA QUERY --------------------*/
+/* QUERY TABLET */
+@media (min-width: 641px) and (max-width: 800px){
+
+/* FOOTER */
+  footer .DB p{
+    display: none;
+  }
+  footer #logo{
+    width: 80%;
+    margin-top:5%;
+  }
+  footer .contacto{
+    display: none;
+  }
+  footer .redes{
+    width: 50%;
+  }
+}
+
+/* QUERY Celular */
+@media (max-width: 640px) {
+/* HEADER */
 .nav-toggle {
   display:none; /*esto va a hacer que el checkbox no se vea, y va a ser reemplazado por el span */
 }
@@ -122,198 +326,6 @@ nav ul{
 }
 
 
- header li a:hover /* .dropdown:hover .dropbtn */ {
-  background-color: red;
-  list-style: none;
-}
-
-/* aca modifique el tamaño de la barra de busqueda */
-header .uk-navbar-container {
-border-radius: 15px;;
-width: 70%;
-height: 50%;
-margin: 0 40%;
-margin-top: 5%;
-}
-
-/* Main */
-main{
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  /* position: absolute;
-  top: 10%; */
-}
-main #titulos {
-color: rgba(255,255,255,0.7);
-margin-left: 2%;
-}
-.primero{
-  padding-top: 15%;
-}
-.logo {
-  position: relative;
-  right: 5%;
-  opacity: 1;
-  width: 40%;
-}
-main div ul li:hover img{
-  border: solid 3px rgba(56, 240, 148, .85);
-  border-radius: 20px;
-}
-
-/* FOOTER */
-footer{
-  width: 100%;
-  background: gray;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  /* position: absolute;
-  bottom: 0; */
-}
-footer .DB{
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  font-size: 0.8rem;
-  margin: 2%;
-}
-footer #logo{
-  width: 40%;
-  margin-top:5%;
-}
-footer .redes{
-  margin:2%;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-footer div a{
-  color: rgba(100, 100, 100, 0.8);
-  font-size: 1.1rem;
-}
-footer .contacto p{
-  color: rgba(100, 100, 100, 0.8);
-  font-size: 1.1rem;
-}
-
-/* hover */
-footer a:hover {
-  color: red;
-  text-decoration:none;
-}
-footer .contacto{
-  display: flex;
-  flex-direction: column;
-  margin:2%;
-  width: 20%;
-}
-footer .contacto p{
-    color: rgba(100, 100, 100, 0.8);
-}
-footer .redes h2, .contacto h2{
-  color: rgba(250,250,250,0.67)
-}
-
-
-
-/* --------------------- MEDIA QUERY --------------------*/
-
-/*voy a hacer una media para pantallas mas grandes que un celular */
-/* Tablet / Celu */
-@media screen and (min-width: 800px) {
-  .nav-toggle-label {
-    display: none;
-  }
-
-  header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-    margin-bottom: 10%;
-  }
-
-  .logo {
-    grid-column: 2 / 3;
-    opacity: 1;
-    width: 80%;
-  }
-
-  nav {
-    // all: unset; /* this causes issues with Edge, since it's unsupported */
-
-    /* the following lines are not from my video, but add Edge support */
-    position: relative;
-    text-align: left;
-    transition: none;
-    transform: scale(1,1);
-    background: none;
-    top: initial;
-    left: initial;
-    /* end Edge support stuff */
-
-    grid-column: 3 / 4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  nav ul {
-    display: flex;
-  }
-
-  nav li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
-
-  nav a {
-    opacity: 1;
-    position: relative;
-  }
-
-  nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background: black;
-    position: absolute;
-    top: -.75em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
-  }
-
-  nav a:hover::before {
-    transform: scale(1,1);
-  }
-
-
-}
-/* QUERY TABLET */
-@media (min-width: 641px) and (max-width: 800px){
-
-/* FOOTER */
-  footer .DB p{
-    display: none;
-  }
-  footer #logo{
-    width: 80%;
-    margin-top:5%;
-  }
-  footer .contacto{
-    display: none;
-  }
-  footer .redes{
-    width: 50%;
-  }
-}
-
-/* QUERY Celular */
-@media (max-width: 640px) {
 
 /* FOOTER */
   footer .DB p{
