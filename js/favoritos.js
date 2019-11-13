@@ -1,25 +1,31 @@
-window.onload = function() {
-  //Paso 1: Leo Storage
+window.addEventListener('load' ,function(){
 
-  var recuperoStorage = localStorage.getItem("gifsFavoritos");
 
-  // Si todavía no tenía gifs favoritos
-  if (recuperoStorage == null) {
-    // Creo una lista vacia
-    gifsFavoritos = [];
+  var jsonFavoritas = localStorage.getItem("seriesFavoritas")
+
+  if (jsonFavoritas == null) {
+    var favoritas = []
   } else {
-    // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
-    gifsFavoritos = JSON.parse(recuperoStorage);
+    // Paso 2 - Desempaqueto el json
+    var favoritas = JSON.parse(jsonFavoritas)
   }
 
-  for (var i = 0; i < gifsFavoritos.length; i++) {
-    // BUSCAR ESE GIF Y MOSTRARLO
-    fetch("https://api.giphy.com/v1/gifs/" + gifsFavoritos[i] + "?api_key=lp7wQ6914aPRmDI6HePRPpQeZXyxLFkU")
-      .then(function(response) {
-        return response.json();
+  for (var i = 0; i < favoritas.length; i++) {
+    fetch("https://api.themoviedb.org/3/movie/ "+ favoritas[i] +" ?api_key=704bd3935947752adbb2e6021fffa6dd&language=en-US")
+      .then(function(respuesta) {
+        return respuesta.json()
       })
-      .then(function(gif) {
-        document.querySelector("ul").innerHTML += "<li><h3><a href=detallegif.html?idGif=" + gif.data.id + ">" + gif.data.title + "</a></h3><img src=" + gif.data.images.original.url + "></li>";
+      .then(function(serie) {
+
+
+
+          document.querySelector(".seriesfavoritas").innerHTML += '<li><div class="uk-panel"><a href="detalle.html?idPelicula='+pelicula.id+'"><img src="https://image.tmdb.org/t/p/original/' + pelicula.poster_path + '" alt=""></a><div class="uk-position-center uk-panel"><h1></h1></div></div></li>'
+
       })
   }
-}
+
+  /* Header y Footer */
+
+
+
+})
