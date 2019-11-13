@@ -8,152 +8,145 @@
 
 body{
   font-family:  sans-serif;
-  /* "Oswald"; */
+	background-color: #222;
+  color: white;
   font-size: 1rem;
-  /* text-transform: uppercase; */
   margin: 0;
   border: 0;
   padding: 0;
   width: 100%;
-  /* display: flex; */
-  position: relative;
-  /* flex-direction: column; */
-  flex-wrap: wrap;
-  color: white;
-  background-color: rgba(0,0,0,0.9);
-  margin: 0;
-	background: #222;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
 }
-/* HEADER */
 
+/*---------- HEADER -----------*/
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
-:root {
-  --background: rgba(56, 240, 148, .85);
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-.content {
-  height: 200vh;
-  background-color:  #38f094;
-  background-blend-mode: multiply;
-  background-size: cover;
-  display: grid;
-  place-items: center;
-}
-
 /* estilo de navegacion */
 header {
-  background: var(--background);
-  /* vuelve al color background de antes */
-  text-align: center;
+  background: rgba(56, 240, 148, .85);
   position: fixed;
-  z-index: 999;
-  /* para que este arriba de todo */
+  z-index: 999; /* para que este arriba de todo */
   width: 100%;
-}
-
-.nav-toggle {
-  display:none;
-  /*esto va a hacer que el checkbox no se vea, y va a ser reemplazado por el span */
-}
-.nav-toggle-label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-left: 1em;
-  height: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  /* lo posiciono en el medio */
-}
-.nav-toggle-label span{
-  display: block;
-  position:relative;
-}
-span{
-  color:white;
-  }
-nav  {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  width: 100%;
-  left: 0;
-background:  var(--background);
-/* el de antes */
-transform: scale(1,0);
-/* se esconde todo lo que esta dentro de nav, con el 0 se achico al maximo la navegacion */
-transform-origin: top;
-transition: transform 400ms ease-in-out;
-/*esta bueno utilizar el transform, en lugar de display:none/display:block, porque te permite ajustar la transicion */
+
 }
 
-nav ul{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  /*le saco el punto del inicio */
+header .logo {
+  opacity: 1;
+  left: 0%;
+  width: 60%;
+  margin: 7%;
 }
-
- nav li {
-   margin-bottom: 1em;
-   margin-left: 1em;
-
- }
-
- nav a {
-   color: white;
-   text-decoration: none;
-   font-size:1.2rem;
-   text-transform: uppercase;
-   opacity: 0;
-   transition: opacity 150ms ease-in-out;
-
- }
-
- nav a:hover {
-   color: #000;
- }
- /* el :checked buscado si a un checkbox seleccionado */
-.nav-toggle:checked ~ nav{
-  transform: scale(1,1);
-  /*ahora al seleccionar el checkbox aparece mi lista , 1,1 aparece la lista en tamano entero*/
-}
-.nav-toggle:checked ~ nav a{
-  opacity: 1;/*esto permite que vaya apareciendo el textoo */
- transition: opacity 250ms ease-in-out 250ms;
- /*cuando ya esta checkeado comienza el efecto */
- /*el segundo nos permite poner el tiempo de tardanza*/
-}
-
-.nav-toggle:checked ~ nav {
-  opacity: 1;/*esto permite que vaya apareciendo el textoo */
- transition: opacity 250ms ease-in-out 250ms;
- /*cuando ya esta checkeado comienza el efecto */
- /*el segundo nos permite poner el tiempo de tardanza*/
-}
-
-
- header li a:hover /* .dropdown:hover .dropbtn */ {
+header li a:hover {
+  padding: 2%;
   background-color: red;
   list-style: none;
 }
-
+#nav-toggle{
+  display: none;
+}
+header .busqueda{
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
 /* aca modifique el tamaño de la barra de busqueda */
 header .uk-navbar-container {
-border-radius: 15px;;
-width: 70%;
-height: 50%;
-margin: 0 40%;
+border-radius: 17px;;
+width: 50%;
 margin-top: 5%;
 }
+header {
+  
+}
+header .uk-search-input{
+  width: 50%;;
+}
 
-/* Main */
+/* modal */
+header #boton_modal_busqueda{
+  background-color: rgba(56, 240, 148, .60);
+  border-radius: 20px;
+  border: solid 2px white;
+  height: 10%;
+  padding: 1%;
+  margin: 2%;
+  color: white;
+  font-size: 0.7rem;
+  z-index: 34;
+}
+/* LO QUE ESTABA EN EL QUERY- */
+.nav-toggle-label {
+  display: none;
+}
+
+/* header {
+  display: grid;
+  grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  margin-bottom: 10%;
+} */
+
+
+
+nav {
+  /* // all: unset; */
+  /* position: relative;
+  text-align: left;
+  transition: none;
+  transform: scale(1,1);
+  background: none;
+  top: initial;
+  left: initial; */
+  /* end Edge support stuff */
+
+  /* grid-column: 3 / 4; */
+  /* display: flex;
+  justify-content: flex-end; */
+  /* align-items: center; */
+  /* a partir de aca hago yo///////////////////// */
+  margin-right: 2%;
+  margin-top:5%;
+  z-index: 34;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin-left: 3em;
+  margin-bottom: 0;
+
+}
+nav ul li a{
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+/* nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background: black;
+  position: absolute;
+  top: -.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+} */
+
+/* nav a:hover::before {
+  transform: scale(1,1);
+} */
+
+
+/* ---------- Main ---------- */
 main{
   display: flex;
   flex-wrap: wrap;
@@ -168,18 +161,12 @@ margin-left: 2%;
 .primero{
   padding-top: 15%;
 }
-.logo {
-  position: relative;
-  right: 5%;
-  opacity: 1;
-  width: 40%;
-}
 main div ul li:hover img{
   border: solid 3px rgba(56, 240, 148, .85);
   border-radius: 20px;
 }
 
-/* FOOTER */
+/* ---------- FOOTER ---------- */
 footer{
   width: 100%;
   background: gray;
@@ -238,78 +225,6 @@ footer .redes h2, .contacto h2{
 
 
 /* --------------------- MEDIA QUERY --------------------*/
-
-/*voy a hacer una media para pantallas mas grandes que un celular */
-/* Tablet / Celu */
-@media screen and (min-width: 800px) {
-  .nav-toggle-label {
-    display: none;
-  }
-
-  header {
-    display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-    margin-bottom: 10%;
-  }
-
-  .logo {
-    grid-column: 2 / 3;
-    opacity: 1;
-    width: 80%;
-  }
-
-  nav {
-    // all: unset; /* this causes issues with Edge, since it's unsupported */
-
-    /* the following lines are not from my video, but add Edge support */
-    position: relative;
-    text-align: left;
-    transition: none;
-    transform: scale(1,1);
-    background: none;
-    top: initial;
-    left: initial;
-    /* end Edge support stuff */
-
-    grid-column: 3 / 4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  nav ul {
-    display: flex;
-  }
-
-  nav li {
-    margin-left: 3em;
-    margin-bottom: 0;
-  }
-
-  nav a {
-    opacity: 1;
-    position: relative;
-  }
-
-  nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background: black;
-    position: absolute;
-    top: -.75em;
-    left: 0;
-    right: 0;
-    transform: scale(0, 1);
-    transition: transform ease-in-out 250ms;
-  }
-
-  nav a:hover::before {
-    transform: scale(1,1);
-  }
-
-
-}
 /* QUERY TABLET */
 @media (min-width: 641px) and (max-width: 800px){
 
@@ -331,6 +246,86 @@ footer .redes h2, .contacto h2{
 
 /* QUERY Celular */
 @media (max-width: 640px) {
+/* HEADER */
+.nav-toggle {
+  display:none; /*esto va a hacer que el checkbox no se vea, y va a ser reemplazado por el span */
+}
+.nav-toggle-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* lo posiciono en el medio */
+}
+.nav-toggle-label span{
+  display: block;
+  position:relative;
+}
+span {
+  color:white;
+  }
+nav  {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  background:  var(--background);/* el de antes */
+  transform: scale(1,0); /* se esconde todo lo que esta dentro de nav, con el 0 se achico al maximo la navegacion */
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+  /*esta bueno utilizar el transform, en lugar de display:none/display:block, porque te permite ajustar la transicion */
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /*le saco el punto del inicio */
+}
+
+ nav li {
+   margin-bottom: 1em;
+   margin-left: 1em;
+
+ }
+
+ nav a {
+   color: white;
+   text-decoration: none;
+   font-size:1.2rem;
+   text-transform: uppercase;
+   opacity: 0;
+   transition: opacity 150ms ease-in-out;
+
+ }
+
+ nav a:hover {
+   color: #000;
+ }
+ /* el :checked buscado si a un checkbox seleccionado */
+.nav-toggle:checked ~ nav{
+  transform: scale(1,1);
+  /*ahora al seleccionar el checkbox aparece mi lista , 1,1 aparece la lista en tamano entero*/
+}
+.nav-toggle:checked ~ nav a{
+  opacity: 1;/*esto permite que vaya apareciendo el textoo */
+ transition: opacity 250ms ease-in-out 250ms;
+ /*cuando ya esta checkeado comienza el efecto */
+ /*el segundo nos permite poner el tiempo de tardanza*/
+}
+
+.nav-toggle:checked ~ nav {
+  opacity: 1;/*esto permite que vaya apareciendo el textoo */
+ transition: opacity 250ms ease-in-out 250ms;
+ /*cuando ya esta checkeado comienza el efecto */
+ /*el segundo nos permite poner el tiempo de tardanza*/
+}
+
+
 
 /* FOOTER */
   footer .DB p{

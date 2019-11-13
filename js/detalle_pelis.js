@@ -91,7 +91,12 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "/recommendations?api_key=c0e01d
 
    var queryString = location.search
 
+<<<<<<< HEAD
    queryString = new URLSearchParams(queryString)
+=======
+
+
+>>>>>>> master
 
    var idSerie = queryString.get("idSerie")
 
