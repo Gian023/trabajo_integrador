@@ -86,75 +86,77 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "/recommendations?api_key=c0e01d
        recomen.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id='+ datos.results[i].id +'"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
      }
    })
+}
+
 
 // VIENOD COMO SE HACE FAVORITOS
-
-   var queryString = location.search
-
-<<<<<<< HEAD
-   queryString = new URLSearchParams(queryString)
-=======
-
-
->>>>>>> master
-
-   var idSerie = queryString.get("idSerie")
-
-   console.log(idSerie);
-
-   // INICIO BLOQUE 1 - Leer el array de storage
-
-     // Paso 1 - Leo de localStorage
-     var jsonFavoritas = localStorage.getItem("seriesFavoritas")
-
-     if (jsonFavoritas == null) {
-       var favoritas = []
-     } else {
-       // Paso 2 - Desempaqueto el json
-       var favoritas = JSON.parse(jsonFavoritas)
-
-     }
-   // CIERRA BLOQUE 1
-
-   if (favoritas.indexOf(idSerie) >= 0) {
-     document.querySelector(".estrellita").style.backgroundColor = "gold"
-   }
-
-   // Bloque 3 - Que pasa al clickear en la estrella
-   document.querySelector(".estrellita").onclick = function(e) {
-     e.preventDefault()
-     // Bloque 3 a - Modifico el array
-     if (favoritas.indexOf(idSerie) >= 0) {
-       // La quito
-       var pos = favoritas.indexOf(idSerie)
-       favoritas.splice(pos,1)
-       document.querySelector(".estrellita").style.backgroundColor = "white"
-     } else {
-       // La agrego
-       favoritas.push(idSerie)
-       document.querySelector(".estrellita").style.backgroundColor = "gold"
-     }
-     // Fin bloque 3 a
-
-     // Bloque 3 b
-
-
-       var json = JSON.stringify(favoritas)
-
-       localStorage.setItem("seriesFavoritas", json)
-     // Fin bloque 3 b
-   }
-   // Fin bloque 3
-
-
-
-
-
-
-
-
-
-
-
-
-}
+//
+//    var queryString = location.search
+//
+// <<<<<<< HEAD
+//    queryString = new URLSearchParams(queryString)
+// =======
+//
+//
+// >>>>>>> master
+//
+//    var idSerie = queryString.get("idSerie")
+//
+//    console.log(idSerie);
+//
+//    // INICIO BLOQUE 1 - Leer el array de storage
+//
+//      // Paso 1 - Leo de localStorage
+//      var jsonFavoritas = localStorage.getItem("seriesFavoritas")
+//
+//      if (jsonFavoritas == null) {
+//        var favoritas = []
+//      } else {
+//        // Paso 2 - Desempaqueto el json
+//        var favoritas = JSON.parse(jsonFavoritas)
+//
+//      }
+//    // CIERRA BLOQUE 1
+//
+//    if (favoritas.indexOf(idSerie) >= 0) {
+//      document.querySelector(".estrellita").style.backgroundColor = "gold"
+//    }
+//
+//    // Bloque 3 - Que pasa al clickear en la estrella
+//    document.querySelector(".estrellita").onclick = function(e) {
+//      e.preventDefault()
+//      // Bloque 3 a - Modifico el array
+//      if (favoritas.indexOf(idSerie) >= 0) {
+//        // La quito
+//        var pos = favoritas.indexOf(idSerie)
+//        favoritas.splice(pos,1)
+//        document.querySelector(".estrellita").style.backgroundColor = "white"
+//      } else {
+//        // La agrego
+//        favoritas.push(idSerie)
+//        document.querySelector(".estrellita").style.backgroundColor = "gold"
+//      }
+//      // Fin bloque 3 a
+//
+//      // Bloque 3 b
+//
+//
+//        var json = JSON.stringify(favoritas)
+//
+//        localStorage.setItem("seriesFavoritas", json)
+//      // Fin bloque 3 b
+//    }
+//    // Fin bloque 3
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// }

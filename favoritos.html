@@ -8,10 +8,43 @@
     <script src="js/uikit-icons.min.js"></script>
     <script src="js/uikit-icons.js"></script>
     <script src="js/uikit.js"></script>
-    <link rel="stylesheet" href="./css/favoritos.css">
+    <link rel="stylesheet" href="css/favoritos.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
   </head>
   <body>
+    <header>
+      <!-- logo -->
+      <a href="index.html"><img class="logo" src="img/serieedd.png" alt=""></a>
+      <!-- buscador -->
+      <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+          <div class="uk-navbar-item">
+            <form class="uk-search uk-search-navbar" action="resultados.html" method="get">
+              <span uk-search-icon></span>
+              <input class="uk-search-input" type="search" placeholder="Search..." name="busqueda">
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" name="" value="">
+      <!-- Hiperviculos -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="discover.html">Descubrir</a></li>
+          <li><a href="generos.html">Genero</a></li>
+            <li><a href="favoritos.html">Favoritos</a></li>
+        </ul>
+      </nav>
+
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span> <i class="fas fa-bars"></i></span>
+    </label>
+
+    </header>
+
 <div class="hero">
   <h1>Your Favorite Collection</h1>
   <p>See your favorite collection in just one site</p>
@@ -42,5 +75,29 @@
     <script src="./js/uikit.js"></script>
     <script rel="stylesheet" src="./js/favoritos.js"></script>
     <script src="./js/login.js" charset="utf-8"></script>
+
+    <!-- FOOTER -->
+        <footer>
+          <div class="DB">
+            <a href="index.html"><img id="logo"src="img/legal.png" alt=""></a>
+
+            <p>The Movie Database (TMDb) is a community built movie and TV database. Every piece of data has been added by our amazing community dating back to 2008. TMDb's strong international focus and breadth of data is largely unmatched and something we're incredibly proud of. Put simply, we live and breathe community and that's precisely what makes us different.
+            </p>
+          </div>
+          <div class="redes">
+            <h2>Seguinos en las redes</h2>
+            <br>
+            <p><a href="https://www.instagram.com/francisco.casas/">Fran Casas</a></p>
+            <p><a href="https://www.instagram.com/gian_pezzi/">Gian Pezzi<a></p>
+            <p><a href="https://www.instagram.com/lautaromoep/">Lautaro Ortiz</a> </p>
+          </div>
+          <div class="contacto">
+            <h2>Contacto</h2>
+            <br>
+            <p>fcasas@udesa.edu.ar</p>
+            <p>gpezzi@udesa.edu.ar</p>
+            <p>lortiz@udesa.edu.ar</p>
+          </div>
+        </footer>
   </body>
 </html>
