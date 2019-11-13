@@ -18,40 +18,41 @@
   <body>
 
     <!-- HEADER -->
-      <header>
-        <a href="index.html"><img class="logo" src="img/serieedd.png" alt=""></a>
-          <nav class="uk-navbar-container" uk-navbar>
-              <div class="uk-navbar-left">
-
-                  <div class="uk-navbar-item">
-                      <form class="uk-search uk-search-navbar" action="resultados.html" method="get">
-                          <span uk-search-icon></span>
-                          <input class="uk-search-input" type="search" placeholder="Search..." name="busqueda">
-                      </form>
-                  </div>
-
-              </div>
-          </nav>
-
-          <input type="checkbox" id="nav-toggle" class="nav-toggle" name="" value="">
-          <nav>
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#discover">Descubrir</a></li>
-            <li class="dropdown" > <a href="generos.html" class="dropbtn">Genero</a></li>
-            <!-- si vamos a sacar el dropdown habria que eliminar las clases -->
-          </ul>
+    <header>
+      <!-- logo -->
+      <a href="index.html"><img class="logo" src="img/serieedd.png" alt=""></a>
+      <!-- buscador -->
+      <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+          <div class="uk-navbar-item">
+            <form class="uk-search uk-search-navbar" action="resultados.html" method="get">
+              <span uk-search-icon></span>
+              <input class="uk-search-input" type="search" placeholder="Search..." name="busqueda">
+            </form>
+          </div>
+        </div>
       </nav>
-      <label for="nav-toggle" class="nav-toggle-label">
-      <span> <i class="fas fa-bars"></i></span>
-      </label>
 
-      </header>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" name="" value="">
+      <!-- Hiperviculos -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="discover.html">Descubrir</a></li>
+          <li><a href="generos.html">Genero</a></li>
+            <li><a href="favoritos.html">Favoritos</a></li>
+        </ul>
+      </nav>
+
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span> <i class="fas fa-bars"></i></span>
+    </label>
+
+    </header>
 
 
 <!-- MAIN -->
     <main>
-
       <h1 id="titulos" class="primero">Series por género</h1>
       <div class=".contenedor_generos">
         <ul class="ul_generos">
@@ -59,7 +60,6 @@
         </ul>
       <!-- API -->
       </div>
-
     </main>
 
 <!-- FOOTER -->
