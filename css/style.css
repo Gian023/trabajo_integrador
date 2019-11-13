@@ -31,43 +31,64 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
 }
-
-header .logo {
+/* Izquierda */
+header .izquierda_header{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 55%;
+  flex-wrap: wrap;
+}
+header .a_logo {
+  width: 20%;
+  margin: 2%;
+}
+header .a_logo .logo {
   opacity: 1;
-  left: 0%;
-  width: 60%;
-  margin: 7%;
+  width: 100%;
 }
 header li a:hover {
-  padding: 2%;
   background-color: red;
   list-style: none;
 }
 #nav-toggle{
   display: none;
 }
-header .busqueda{
-  width: 30%;
+.izquierda_header ul {
+  display: flex;
+}
+
+.izquierda_header ul li {
+  margin-left: 1em;
+
+}
+.izquierda_header ul li a{
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+
+/* Derecha */
+header .derecha_header{
   display: flex;
   justify-content: flex-end;
-  align-items: baseline;
+  width: 40%;
+  align-items: center;
 }
-/* aca modifique el tamaño de la barra de busqueda */
+
+/* << BARRA DE BUSUEDA >> */
 header .uk-navbar-container {
 border-radius: 17px;;
 width: 50%;
-margin-top: 5%;
-}
-header {
-  
+/* margin-top: 5%; */
 }
 header .uk-search-input{
-  width: 50%;;
+  width: 71%;;
 }
 
-/* modal */
+/* modal BUSQUEDA*/
 header #boton_modal_busqueda{
   background-color: rgba(56, 240, 148, .60);
   border-radius: 20px;
@@ -79,7 +100,24 @@ header #boton_modal_busqueda{
   font-size: 0.7rem;
   z-index: 34;
 }
-/* LO QUE ESTABA EN EL QUERY- */
+/* MODAL USUARIO */
+
+header  #corazón{
+  width: 5%;
+  z-index: 9999;
+}
+header  #corazón img {
+  width: 100%;
+}
+header  #a_usuario{
+  display: block;
+  width: 10%;
+  margin:  4% 2%;
+}
+header  #a_usuario img{
+  width:100%;
+}
+/* ----- LO QUE ESTABA EN EL QUERY- -----*/
 .nav-toggle-label {
   display: none;
 }
@@ -111,21 +149,6 @@ nav {
   margin-right: 2%;
   margin-top:5%;
   z-index: 34;
-}
-
-nav ul {
-  display: flex;
-}
-
-nav li {
-  margin-left: 3em;
-  margin-bottom: 0;
-
-}
-nav ul li a{
-  color: white;
-  text-transform: uppercase;
-  font-size: 1.2rem;
 }
 
 /* nav a::before {
