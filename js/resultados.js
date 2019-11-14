@@ -1,4 +1,3 @@
-
 window.addEventListener("load",function(){
 var queryString = location.search; //Capturamos la query string del navegador
 
@@ -24,9 +23,6 @@ fetch(url)
     destino.innerHTML+= '<li><a href="info_serie.html?id='+ datos.results[i].id+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
   }
 
-
-
-
 })
 
 
@@ -35,6 +31,17 @@ fetch(url)
 
 
 
+})
+var tresCaracteres = document.querySelector('uk-search-input')
+document.querySelector('uk-search').addEventListener('submit', function(event){
 
-
+if (tresCaracteres.value.length < 3) {
+  event.preventDefault();
+  UIkit.notification({
+      message: 'Ingresá un nombre de 3 caracteres o más!',
+      status: 'warning',
+      pos: 'top-center',
+      timeout: 3000
+    });
+  }
 })
