@@ -23,7 +23,7 @@ body{
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
 /* estilo de navegacion */
 header {
-  background: rgba(56, 240, 148, .85);
+  background: rgba(56, 240, 148, 0.85);
   position: fixed;
   z-index: 999; /* para que este arriba de todo */
   width: 100%;
@@ -48,9 +48,10 @@ header .a_logo .logo {
   opacity: 1;
   width: 100%;
 }
-header li a:hover {
-  background-color: red;
-  list-style: none;
+header .izquierda_header nav ul li:hover a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
 }
 #nav-toggle{
   display: none;
@@ -103,7 +104,7 @@ header #boton_modal_busqueda{
 /* MODAL USUARIO */
 
 header  #corazón{
-  width: 5%;
+  width: 7%;
   z-index: 9999;
 }
 header  #corazón img {
@@ -111,7 +112,7 @@ header  #corazón img {
 }
 header  #a_usuario{
   display: block;
-  width: 10%;
+  width: 9%;
   margin:  4% 2%;
 }
 header  #a_usuario img{
@@ -174,18 +175,16 @@ main{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  /* position: absolute;
-  top: 10%; */
 }
 main #titulos {
 color: rgba(255,255,255,0.7);
 margin-left: 2%;
 }
 .primero{
-  padding-top: 15%;
+  padding-top: 10%;
 }
 main div ul li:hover img{
-  border: solid 3px rgba(56, 240, 148, .85);
+  border: solid 1px rgba(56, 240, 148, 0.85);
   border-radius: 20px;
 }
 
@@ -197,8 +196,6 @@ footer{
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  /* position: absolute;
-  bottom: 0; */
 }
 footer .DB{
   display: flex;

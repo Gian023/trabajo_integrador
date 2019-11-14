@@ -7,41 +7,81 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="css/info_series.css">
-    <script src="https://kit.fontawesome.com/4710dd3a67.js"></script>
 
+    <script src="https://kit.fontawesome.com/4710dd3a67.js"></script>
+    <script type="text/javascript" src="buscador.js"></script>
+    <!-- uikit -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+    <!-- script nuestro -->
+    <script type="text/javascript" src="js/detalle_pelis.js"></script>
   </head>
 
   <body>
 
-<header>
-  <a href="index.html">
-  <img class="logo" src="img/serieedd.png" alt="">
-</a>
-    <nav class="uk-navbar-container" uk-navbar>
-        <div class="uk-navbar-left">
+    <!-- HEADER -->
+    <header>
+      <!-- IZQUIERA -->
+      <div class="izquierda_header">
+        <!-- logo -->
+        <a class="a_logo" href="index.html"><img class="logo" src="img/serieedd.png" alt=""></a>
+        <!-- Hiperviculos -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" name="" value="">
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="discover">Descubrir</a></li>
+            <li><a href="generos.html">Genero</a></li>
+          </ul>
+        </nav>
 
-            <div class="uk-navbar-item">
-                <form class="uk-search uk-search-navbar">
-                    <span uk-search-icon></span>
-                    <input class="uk-search-input" type="search" placeholder="Search...">
-                </form>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span> <i class="fas fa-bars"></i></span>
+        </label>
+      </div>
+
+      <!-- DERECHA-->
+      <div class="derecha_header">
+        <!-- buscador -->
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="conenedor_buscador">
+              <form class="uk-search uk-search-navbar" action="resultados.html" method="get">
+                <span uk-search-icon></span>
+                <input class="uk-search-input" type="search" placeholder="Search..." name="busqueda">
+              </form>
             </div>
-
+        </nav>
+        <!-- MODAL -->
+        <button id="boton_modal_busqueda" class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #modal-example"><strong>Avanzada</strong></button>
+        <div id="modal-example" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <h2 class="uk-modal-title">Ingrese su busqueda</h2>
+                <label for="input1">Género</label>
+                <input type="text" name="" value="">
+                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancelar</button>
+                    <button class="uk-button uk-button-primary" type="submit">Enviar</button>
+                </p>
+            </div>
         </div>
-    </nav>
 
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" name="" value="">
-    <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="#discover">Descubrir</a></li>
-      <li class="dropdown"> <a href="(2)generos.html" class="dropbtn">Genero</a></li>
-    </ul>
-</nav>
-<label for="nav-toggle" class="nav-toggle-label">
-<span> <i class="fas fa-bars"></i></span>
-</label>
-</header>
+        <!-- MOdal del usuario -->
+        <a id="corazón" href="favoritos.html"><img src="img/corazon.png" alt=""> </a>
+        <a id="a_usuario"href="#modal-usuario" uk-toggle><img src="img/usuario.png" alt=""> </a>
+        <div id="modal-usuario" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">                  <h2 class="uk-modal-title">INgrese sus datos</h2>
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" value="">
+                <label for="">Correo electrónico</label>
+                <input type="text" name="" value="">
+                <p class="uk-text-right">
+                    <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                    <button class="uk-button uk-button-primary" type="button">Enter</button>
+                </p>
+            </div>
+        </div>
+
+      </div>
+    </header>
 
 <!-- MAIN -->
   <main>
@@ -100,11 +140,5 @@
         <p>lortiz@udesa.edu.ar</p>
       </div>
     </footer>
-
-    <!-- uikit -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
-    <!-- script nuestro -->
-    <script type="text/javascript" src="js/detalle_pelis.js"></script>
   </body>
 </html>
