@@ -1,4 +1,4 @@
-window.addEventListeber = function (){
+window.addEventListener("load", function(){
   console.log("Hola puto");
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
   .then(function(respuesta){
@@ -21,4 +21,4 @@ window.addEventListeber = function (){
 
 
 
-}
+});
