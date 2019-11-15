@@ -5,6 +5,9 @@ var searchParams = new URLSearchParams(queryString); //Obtenemos las posiciones 
 
 var busqueda = searchParams.get("busqueda"); //con el método get obtenenemos el valor del término a buscar. En este obtenenemos lo que escribió el usuario en el campo de busqueda cuyo "name" es "search" (name="search").
 var page = 1;
+vermas()
+function vermas() {
+
   var url = "https://api.themoviedb.org/3/search/tv?api_key=7246c48f98d8db92d443b21af0633a14&language=en-US&query=" + busqueda + '&page='+ page
 
     fetch(url)
@@ -12,26 +15,43 @@ var page = 1;
         return respuesta.json();
       })
       .then(function(datos){
+
+
       var destino = document.querySelector(".resultados");
       var datosFinales = datos.results;
       var titulo = document.querySelector(".primero");
 
       titulo.innerText = busqueda;
 
-      console.log(datos);
-
-      if (datos.results.length == 0) {
-        alert("No se encuentran resultados")
-      }
+      console.log(datos, page);
       for(var i=0; i<datosFinales.length; i++){
         destino.innerHTML+= '<li><a href="info_serie.html?id='+ datos.results[i].id+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
       }
+      if (datos.total_pages == page) {
+        console.log('cortamo');
+        window.removeEventListener('scroll', scrolled)
+        return
+        // alert("No se encuentran resultados")
+      }
     })
 
+  }
+  window.addEventListener('scroll', scrolled)
+  function scrolled(e) {
+    var myDiv = document.querySelector('body')
+    if (myDiv.offsetHeight + myDiv.scrollTop >= myDiv.scrollHeight) {
+      // scrolledToBottom(e);
+      page++
+      vermas()
+    }
+
+  }
 // var btn = document.querySelector("#page");
-// btn.onclick =  function boton () {
-//   page += 1;
+// btn.onclick =  function() {
+//   page++;
+//   vermas()
 // }
+
 
 
 
