@@ -39,7 +39,10 @@ width: 100%;
 
 /* CELULAR */
 @media (max-width: 450px){
-
+  main .div-resultados ul.resultados li{
+    width: 50%;
+    padding: 0,5%;
+  }
  #click_pelis img {
     width: 100%;
   }
