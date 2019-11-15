@@ -55,16 +55,7 @@ var recom = document.querySelector(".Recomendaciones");
 var btn = document.querySelector("#boton-recom");
 
 btn.onclick = function (){
-  recom.style.display = "block";
-  btn.onclick = function (){
-    recom.style.display = "none";
-    btn.onclick = function (){
-      recom.style.display = "block";
-      btn.onclick = function (){
-        recom.style.display = "none";
-      }
-    }
-  }
+  recom.classList.toggle('show')
 }
 
 
