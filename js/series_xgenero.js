@@ -25,7 +25,11 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af
   }
 console.log(series.length);
   if (datos.results.length == 0) {
-    titulo.innerHTML = "No se encontró el género"
+    titulo.innerHTML = "No se encontró el género";
+    titulo.style.textTransform = "none";
+    titulo.style.padding = "20%"
+    titulo.style.textAlign = "center"
+    titulo.style.color = "Red"
   }
 
 })
