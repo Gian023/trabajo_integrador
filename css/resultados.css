@@ -30,6 +30,7 @@ width: 100%;
 
   main .div-resultados ul.resultados li{
     width: 30%;
+    padding: 1%;
   }
   #click_pelis img {
     width: 50%;
