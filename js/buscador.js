@@ -9,13 +9,18 @@ window.addEventListener("load",function(){
   var tresCaracteres = document.querySelector('.uk-search-input')
   document.querySelector('.conenedor_buscador form').addEventListener('submit', function(event){
 
-  if (tresCaracteres.value.length < 3) {
+    if (tresCaracteres.value.length < 3) {
 
-    alert("hola")
-    event.preventDefault();
-  
-  }
-})
+      UIkit.notification({
+      message: 'Ingrese al menos 3 caracteres',
+      status: 'primary',
+      pos: 'top-center',
+      timeout: 3000
+      });
+      event.preventDefault();
+
+    }
+  })
 
 
 
