@@ -26,6 +26,7 @@ width: 100%;
 
 
 /* media */
+/* TABLEt */
 @media (min-width: 451px) and (max-width: 768px){
 
   #click_pelis img {
@@ -33,7 +34,7 @@ width: 100%;
    }
 }
 
-
+/* CELULAR */
 @media (max-width: 450px){
 
  #click_pelis img {
