@@ -1,5 +1,15 @@
 window.onload = function(){
 
+  var recuperoStorage = localStorage.getItem("seriesFavoritos");
+   // Si todavía no tenía gifs favoritos
+   if (recuperoStorage == null) {
+     // Creo una lista vacia
+     seriesFavoritos = [];
+   } else {
+     // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
+     seriesFavoritos = JSON.parse(recuperoStorage);
+   }
+
 // ////////////////Info de la serie
 var querystring = location.search;
 var query2 = new URLSearchParams(querystring)
@@ -77,70 +87,44 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "/recommendations?api_key=c0e01d
        recomen.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id='+ datos.results[i].id +'"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
      }
    })
+
+
+
+// FAVORITOS
+//
+
+var datos = new URLSearchParams(location.search);
+var id = datos.get("id");
+if (seriesFavoritos.includes(id)) {
+ document.querySelector(".botonFavorito").innerHTML = "QUITAR DE FAVORITOS";
 }
+fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US")
+ .then(function(response) {
+   return response.json();
+ })
+ .then(function(id) {
+ })
+ document.querySelector(".botonFavorito").onclick = function() {
+   //Paso 2: Modificar la informacion
+   // Si la serie ya era favorito
+   if (seriesFavoritos.includes(id)) {
+     // Lo quito
+     var index = seriesFavoritos.indexOf(id);
+     seriesFavoritos.splice(index, 1);
+     document.querySelector(".botonFavorito").innerHTML = "AGREGAR FAVORITO";
+   } else {
+     //Lo agrego
+     seriesFavoritos.push(id);
+     document.querySelector(".botonFavorito").innerHTML = "QUITAR DE FAVORITOS";
+   }
+   //Paso 3: Escribir en storage
+   var infoParaStorage = JSON.stringify(seriesFavoritos);
+   localStorage.setItem("seriesFavoritos", infoParaStorage);
+   console.log(localStorage);
+ }
 
 
-// VIENOD COMO SE HACE FAVORITOS
-//
-//    var queryString = location.search
-//
-// <<<<<<< HEAD
-//    queryString = new URLSearchParams(queryString)
-// =======
-//
-//
-// >>>>>>> master
-//
-//    var idSerie = queryString.get("idSerie")
-//
-//    console.log(idSerie);
-//
-//    // INICIO BLOQUE 1 - Leer el array de storage
-//
-//      // Paso 1 - Leo de localStorage
-//      var jsonFavoritas = localStorage.getItem("seriesFavoritas")
-//
-//      if (jsonFavoritas == null) {
-//        var favoritas = []
-//      } else {
-//        // Paso 2 - Desempaqueto el json
-//        var favoritas = JSON.parse(jsonFavoritas)
-//
-//      }
-//    // CIERRA BLOQUE 1
-//
-//    if (favoritas.indexOf(idSerie) >= 0) {
-//      document.querySelector(".estrellita").style.backgroundColor = "gold"
-//    }
-//
-//    // Bloque 3 - Que pasa al clickear en la estrella
-//    document.querySelector(".estrellita").onclick = function(e) {
-//      e.preventDefault()
-//      // Bloque 3 a - Modifico el array
-//      if (favoritas.indexOf(idSerie) >= 0) {
-//        // La quito
-//        var pos = favoritas.indexOf(idSerie)
-//        favoritas.splice(pos,1)
-//        document.querySelector(".estrellita").style.backgroundColor = "white"
-//      } else {
-//        // La agrego
-//        favoritas.push(idSerie)
-//        document.querySelector(".estrellita").style.backgroundColor = "gold"
-//      }
-//      // Fin bloque 3 a
-//
-//      // Bloque 3 b
-//
-//
-//        var json = JSON.stringify(favoritas)
-//
-//        localStorage.setItem("seriesFavoritas", json)
-//      // Fin bloque 3 b
-//    }
-//    // Fin bloque 3
-//
-//
-//
+}
 //
 //
 //
