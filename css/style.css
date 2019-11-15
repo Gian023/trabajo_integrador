@@ -118,6 +118,19 @@ header  #a_usuario{
 header  #a_usuario img{
   width:100%;
 }
+#modal_usuario {
+  background-color: #222;;
+
+}
+#modal_usuario form {
+  display: flex;
+  flex-direction: column;
+
+}
+#modal_usuario h2 {
+  color: white;
+  text-align: center;
+}
 /* ----- LO QUE ESTABA EN EL QUERY- -----*/
 .nav-toggle-label {
   display: none;
