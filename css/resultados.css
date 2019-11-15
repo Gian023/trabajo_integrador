@@ -28,7 +28,9 @@ width: 100%;
 /* TABLEt */
 @media (min-width: 451px) and (max-width: 768px){
 
-  asdsadsa
+  main .div-resultados ul.resultados li{
+    width: 30%;
+  }
   #click_pelis img {
     width: 50%;
    }
