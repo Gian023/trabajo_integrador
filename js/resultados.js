@@ -21,7 +21,8 @@ var page = 1;
       console.log(datos);
 
       if (datos.results.length == 0) {
-        alert("No se encuentran resultados")
+        titulo.innerText = "No se encontraron resultados";
+        titulo.style.textTransform = "none";
       }
       for(var i=0; i<datosFinales.length; i++){
         destino.innerHTML+= '<li><a href="info_serie.html?id='+ datos.results[i].id+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
