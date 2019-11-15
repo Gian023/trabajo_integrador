@@ -23,7 +23,19 @@ function vermas() {
 
       titulo.innerText = busqueda;
 
+<<<<<<< HEAD
       console.log(datos, page);
+=======
+      console.log(datos);
+
+      if (datos.results.length == 0) {
+        titulo.innerText = "No se encontraron resultados";
+        titulo.style.textTransform = "none";
+        titulo.style.padding = "20%"
+        titulo.style.textAlign = "center"
+        titulo.style.color = "Red"
+      }
+>>>>>>> master
       for(var i=0; i<datosFinales.length; i++){
         destino.innerHTML+= '<li><a href="info_serie.html?id='+ datos.results[i].id+'"> '+'<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
       }

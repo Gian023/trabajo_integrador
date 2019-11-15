@@ -1,4 +1,4 @@
-window.onload = function (){
+window.addEventListeber = function (){
   console.log("Hola puto");
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
   .then(function(respuesta){
@@ -15,4 +15,10 @@ window.onload = function (){
       form.innerHTML += '<option><a href="series_xgenero.html?id='+ datos.genres[i].id +'&name='+ datos.genres[i].name +'">'+  datos.genres[i].name + '</a></option>'
     }
   })
+
+
+
+
+
+
 }
