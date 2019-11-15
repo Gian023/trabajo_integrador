@@ -27,7 +27,7 @@ fetch(url)
     div.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id='+ datos.results[i].id +'"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
   }
 console.log(series.length);
-  if (datos.results.length == 0) {
+  if (datos.results.length == 0 && page == 1) {
     titulo.innerHTML = "No se encontró el género";
     titulo.style.textTransform = "none";
     titulo.style.padding = "20%"
