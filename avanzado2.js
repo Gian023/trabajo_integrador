@@ -8,6 +8,10 @@ var page = 1;
 vermas()
 function vermas() {
 
+
+  // esta es la api correcta
+// https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false
+
   var url = "https://api.themoviedb.org/3/search/tv?api_key=7246c48f98d8db92d443b21af0633a14&language=en-US&query=" + busqueda + '&page='+ page
 
     fetch(url)
@@ -59,6 +63,7 @@ function vermas() {
     }
 
   }
+
 
 
 
