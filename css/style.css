@@ -119,7 +119,8 @@ header  #a_usuario img{
   width:100%;
 }
 #modal_usuario {
-  background-color: #222;;
+  background-color: #222;
+  border-radius: 20px;
 
 }
 #modal_usuario form {
