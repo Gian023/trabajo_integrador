@@ -17,3 +17,10 @@
  .ul_generos li a img{
   width: 100%;
 }
+
+/* MEDIA QUERY */
+
+/* MEDIA QUERY TABLET */
+@media (min-width: 451px) and (max-width: 768px){
+  
+}
