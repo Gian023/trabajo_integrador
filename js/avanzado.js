@@ -7,16 +7,16 @@ window.addEventListener("load", function(){
   .then(function(datos){
    console.log(datos);
     var buscador = document.querySelector(".avana");
-    var form = document.createElement("select");
-    buscador.append(form);
+    var label1 = document.querySelector(".incluir");
+    var label2 = document.querySelector(".excluir");
+    // buscador.append(form);
     var gnre = datos.genres;
 
     for (var i=0; i<gnre.length; i++){
-      form.innerHTML += '<option><a href="series_xgenero.html?id='+ datos.genres[i].id +'&name='+ datos.genres[i].name +'">'+  datos.genres[i].name + '</a></option>'
+      label1.innerHTML += '<option value="' + datos.genres[i].name + '">'+ datos.genres[i].name + '</option>'
+      label2.innerHTML += '<option value="' + datos.genres[i].name + '">'+ datos.genres[i].name + '</option>'
     }
   })
-
-
 
 
 

@@ -90,17 +90,22 @@ header .uk-search-input{
 }
 
 /* modal BUSQUEDA*/
-header #boton_modal_busqueda{
-  background-color: rgba(56, 240, 148, .60);
-  border-radius: 20px;
-  border: solid 2px white;
-  height: 10%;
-  padding: 1%;
-  margin: 2%;
-  color: white;
-  font-size: 0.7rem;
-  z-index: 34;
+#avanzada{
+  margin: 3%;
 }
+ #modal_avanzada{
+  background-color: #222;
+  border-radius: 20px;
+}
+ #modal_avanzada form {
+  display: flex;
+  flex-direction: column;
+}
+ #modal_avanzada  h2 {
+  color: white;
+  text-align: center;
+}
+
 /* MODAL USUARIO */
 
 header  #corazón{
