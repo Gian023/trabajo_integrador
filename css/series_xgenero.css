@@ -25,11 +25,17 @@
 
   main .contenedor_generos .ul_generos li{
     width: 30%;
-    
+
   }
 }
 
 
 /* MEDIA QUERY CELULAR */
 @media (max-width: 450px){
+
+  main .contenedor_generos .ul_generos li{
+    width: 50%;
+
+  }
+
 }
