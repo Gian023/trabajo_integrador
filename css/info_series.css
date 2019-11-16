@@ -74,4 +74,16 @@ main .Recomendaciones #titulos{
    width: 95%;
   }
 
+
+}
+
+/* QUERY CELULAR */
+@media (max-width: 450px){
+.foto_conteiner{
+  height: 50%;
+}
+
+main h1#titulos.primero{
+  top: 5%;
+}
 }
