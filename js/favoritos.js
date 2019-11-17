@@ -19,8 +19,8 @@ window.onload = function() {
        })
        .then(function(serie) {
          console.log(serie)
-         document.querySelector(".seriesfavoritas").innerHTML += '<li>'+ '<a href="../info_serie.html?id='+ serie.id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + serie.poster_path + '">' + '</a>'+ '</li>'
+         document.querySelector(".seriesfavoritas").innerHTML += '<li>'+ '<a href="info_serie.html?id='+ serie.id +'">' + '<img src="https://image.tmdb.org/t/p/w300/' + serie.poster_path + '">' + '</a>'+ '</li>'
        })
-   
+
  }
 }

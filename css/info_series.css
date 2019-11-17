@@ -1,6 +1,7 @@
 /* estilo de los detalles de las series */
 main {
   display: flex;
+  position: relative;
 }
 main .foto_conteiner{
   width: 50%;
@@ -63,7 +64,10 @@ main .Recomendaciones #titulos{
 .show {
   display: block;  /* Con esto aparecen las recomendaciones */
 }
-
+.botonFavorito{
+  position: absolute;
+  left: 25%;
+}
  /* QUERY TABLET */
 @media (max-width: 800px){
 
