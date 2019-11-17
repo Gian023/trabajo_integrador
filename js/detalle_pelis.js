@@ -124,6 +124,22 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=2e2296c9e03da266b3fa41
  }
 
 
+
+
+ //Random
+
+ var buscarRandom = document.querySelector(".descubrir")
+ function aleatorio () {
+   return Math.floor(Math.random() * 9542);
+ }
+
+ buscarRandom.innerHTML = '<a href="info_serie.html?id=' + aleatorio() + '">'+'Descubrir'+'</a>'
+
+
+
+
+
+
 }
 //
 //

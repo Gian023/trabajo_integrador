@@ -56,9 +56,14 @@ fetch("https://api.themoviedb.org/3/tv/airing_today?api_key=c0e01d0df95b98b689dc
 
 
 
+//Random
 
+var buscarRandom = document.querySelector(".descubrir")
+function aleatorio () {
+  return Math.floor(Math.random() * 9542);
+}
 
-
+buscarRandom.innerHTML = '<a href="info_serie.html?id=' + aleatorio() + '">'+'Descubrir'+'</a>'
 
 
 
