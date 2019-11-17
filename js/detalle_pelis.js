@@ -109,7 +109,7 @@ var id = datos.get("id");
 if (seriesFavoritos.includes(id)) {
  document.querySelector(".botonFavorito").innerHTML = "QUITAR DE FAVORITOS";
 }
-fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US")
+fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
  .then(function(response) {
    return response.json();
  })
@@ -140,7 +140,7 @@ var idTarde = datos.get("id");
 if (seriesFavoritos.includes(idTarde)) {
  document.querySelector(".botonFavoritoTarde").innerHTML = "QUITAR DE tarde";
 }
-fetch("https://api.themoviedb.org/3/tv/" + idTarde + "?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US")
+fetch("https://api.themoviedb.org/3/tv/" + idTarde + "?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
  .then(function(response) {
    return response.json();
  })

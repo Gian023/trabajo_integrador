@@ -13,7 +13,7 @@ window.addEventListener("load", function() {
   for (var i = 0; i < seriesFavoritosTarde.length; i++) {
 
       // BUSCAR ESE GIF Y MOSTRARLO
-      fetch("https://api.themoviedb.org/3/tv/" + seriesFavoritosTarde[i] + "?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US")
+      fetch("https://api.themoviedb.org/3/tv/" + seriesFavoritosTarde[i] + "?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
         .then(function(response) {
           return response.json();
         })
