@@ -10,8 +10,6 @@ window.onload = function(){
      seriesFavoritos = JSON.parse(recuperoStorage);
    }
 ////////////////////Mas serieTarde
-
-
 var recuperoStorageTarde = localStorage.getItem("seriesFavoritosTarde");
  // Si todavía no tenía gifs favoritos
  if (recuperoStorageTarde == null) {
@@ -21,6 +19,8 @@ var recuperoStorageTarde = localStorage.getItem("seriesFavoritosTarde");
    // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
    seriesFavoritosTarde = JSON.parse(recuperoStorageTarde);
  }
+
+
 // ////////////////Info de la serie
 var querystring = location.search;
 var query2 = new URLSearchParams(querystring)
@@ -135,33 +135,33 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=2e2296c9e03da266b3fa41
  }
 ///////////////verMasTarde
 
-var datosTarde = new URLSearchParams(location.search);
-var idTarde = datosTarde.get("id");
-if (seriesFavoritosTarde.includes(idTarde)) {
- document.querySelector(".botonFavorito").innerHTML = "QUITAR DE FAVORITOS";
+var datos = new URLSearchParams(location.search);
+var idTarde = datos.get("id");
+if (seriesFavoritos.includes(idTarde)) {
+ document.querySelector(".botonFavoritoTarde").innerHTML = "QUITAR DE tarde";
 }
 fetch("https://api.themoviedb.org/3/tv/" + idTarde + "?api_key=2e2296c9e03da266b3fa417a70458299&language=en-US")
  .then(function(response) {
    return response.json();
  })
- .then(function(idTarde) {
- })
+
  document.querySelector(".botonFavoritoTarde").onclick = function() {
    //Paso 2: Modificar la informacion
    // Si la serie ya era favorito
    if (seriesFavoritosTarde.includes(idTarde)) {
      // Lo quito
      var index = seriesFavoritosTarde.indexOf(idTarde);
-     seriesFavoritosTarde.splice(index, 1);
-     document.querySelector(".botonFavoritoTarde").innerHTML = "VER MAS TARDE";
+     seriesFavoritos.splice(index, 1);
+     document.querySelector(".botonFavoritoTarde").innerHTML = "AGREGAR Tarde";
    } else {
      //Lo agrego
      seriesFavoritosTarde.push(idTarde);
-     document.querySelector(".botonFavoritoTarde").innerHTML = "QUITAR DE VER MAS TARDE";
+     document.querySelector(".botonFavoritoTarde").innerHTML = "QUITAR DE tarde";
    }
    //Paso 3: Escribir en storage
    var infoParaStorageTarde = JSON.stringify(seriesFavoritosTarde);
    localStorage.setItem("seriesFavoritosTarde", infoParaStorageTarde);
+   console.log(localStorage);
  }
 
 
