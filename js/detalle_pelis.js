@@ -54,6 +54,11 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=c0e01d0df95b98b689dcb3
 
   // poster
   foto_conteiner.innerHTML = '<img src="https://image.tmdb.org/t/p/w500/'+ datos.poster_path + '">'
+  if (datos.poster_path == null)
+  {
+    var foto = document.querySelector('.foto_conteiner');
+    foto.innerHTML = '<img src="img/tecnicos.jpg">'
+  }
 })
 ///////TRAILER
 fetch("https://api.themoviedb.org/3/tv/" + id + "/videos?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
