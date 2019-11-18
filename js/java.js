@@ -65,6 +65,7 @@ function aleatorio () {
 
 buscarRandom.innerHTML = '<a href="info_serie.html?id=' + aleatorio() + '">'+'Descubrir'+'</a>'
 
+//Se creo una funcion que permite hallar series random
 
 
 
