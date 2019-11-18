@@ -3,7 +3,12 @@ var queryString = location.search; //Capturamos la query string del navegador
 
 var searchParams = new URLSearchParams(queryString); //Obtenemos las posiciones y los datos de la queryString
 
-var busqueda = searchParams.get("busqueda"); //con el método get obtenenemos el valor del término a buscar. En este obtenenemos lo que escribió el usuario en el campo de busqueda cuyo "name" es "search" (name="search").
+var incluir = searchParams.get("incluir");
+var excluir = searchParams.get("excluir");
+var orden = searchParams.get("orden");
+var año = searchParams.get("año");
+
+console.log(incluir, excluir, orden, año);
 var page = 1;
 vermas()
 function vermas() {
@@ -48,7 +53,7 @@ function vermas() {
         console.log('cortamo');
         window.removeEventListener('scroll', scrolled)
         return
-        // alert("No se encuentran resultados")
+
       }
     })
 
