@@ -12,26 +12,16 @@ console.log(incluir, excluir, orden, año);
 var page = 1;
 vermas()
 function vermas() {
-
-
-  // esta es la api correcta
-// https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false
-
-  var url = "https://api.themoviedb.org/3/search/tv?api_key=7246c48f98d8db92d443b21af0633a14&language=en-US&query=" + busqueda + '&page='+ page
+  var url = "https://api.themoviedb.org/3/discover/tv?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US&sort_by=" + orden + "&first_air_date_year=" + año + "&page=" + page + "&timezone=America%2FNew_York&with_genres=" + incluir + "&without_genres=" + excluir + "include_null_first_air_dates=false";
 
     fetch(url)
       .then(function(respuesta){
         return respuesta.json();
       })
       .then(function(datos){
-
-
       var destino = document.querySelector(".resultados");
       var datosFinales = datos.results;
       var titulo = document.querySelector(".primero");
-
-      titulo.innerText = busqueda;
-
 
       console.log(datos, page);
 
@@ -58,16 +48,16 @@ function vermas() {
     })
 
   }
-  window.addEventListener('scroll', scrolled)
-  function scrolled(e) {
-    var myDiv = document.querySelector('body')
-    if (myDiv.offsetHeight + myDiv.scrollTop >= myDiv.scrollHeight) {
-      // scrolledToBottom(e);
-      page++
-      vermas()
-    }
-
-  }
+  // window.addEventListener('scroll', scrolled)
+  // function scrolled(e) {
+  //   var myDiv = document.querySelector('body')
+  //   if (myDiv.offsetHeight + myDiv.scrollTop >= myDiv.scrollHeight) {
+  //     // scrolledToBottom(e);
+  //     page++
+  //     vermas()
+  //   }
+  //
+  // }
 
 
 

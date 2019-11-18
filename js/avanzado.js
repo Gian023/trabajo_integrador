@@ -13,8 +13,8 @@ window.addEventListener("load", function(){
     var gnre = datos.genres;
 
     for (var i=0; i<gnre.length; i++){
-      label1.innerHTML += '<option value="' + datos.genres[i].name + '">'+ datos.genres[i].name + '</option>'
-      label2.innerHTML += '<option value="' + datos.genres[i].name + '">'+ datos.genres[i].name + '</option>'
+      label1.innerHTML += '<option value="' + datos.genres[i].id + '">'+ datos.genres[i].name + '</option>'
+      label2.innerHTML += '<option value="' + datos.genres[i].id + '">'+ datos.genres[i].name + '</option>'
     }
   })
 
