@@ -82,6 +82,7 @@ window.onload = function() {
 
   btn.onclick = function() {
     recom.classList.toggle('show')
+    document.querySelector("#boton-recom").innerHTML = "Recomendaciones";
   }
 
 
@@ -100,7 +101,7 @@ window.onload = function() {
       var pel = datos.results;
 
       for (var i = 0; i < pel.length; i++) {
-        
+
         recomen.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
       }
     })
@@ -113,7 +114,7 @@ window.onload = function() {
   var datos = new URLSearchParams(location.search);
   var id = datos.get("id");
   if (seriesFavoritos.includes(id)) {
-    document.querySelector(".botonFavorito").innerHTML = "QUITAR DE FAVORITOS";
+    document.querySelector(".botonFavorito").innerHTML = "Quitar de Favoritos";
   }
   fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
     .then(function(response) {
@@ -127,11 +128,11 @@ window.onload = function() {
       // Lo quito
       var index = seriesFavoritos.indexOf(id);
       seriesFavoritos.splice(index, 1);
-      document.querySelector(".botonFavorito").innerHTML = "AGREGAR FAVORITO";
+      document.querySelector(".botonFavorito").innerHTML = "AGREGAR a favoritos";
     } else {
       //Lo agrego
       seriesFavoritos.push(id);
-      document.querySelector(".botonFavorito").innerHTML = "QUITAR DE FAVORITOS";
+      document.querySelector(".botonFavorito").innerHTML = "QUITAR de favoritos";
     }
     //Paso 3: Escribir en storage
     var infoParaStorage = JSON.stringify(seriesFavoritos);
@@ -157,11 +158,11 @@ window.onload = function() {
       // Lo quito
       var index = seriesFavoritosTarde.indexOf(idTarde);
       seriesFavoritosTarde.splice(index, 1);
-      document.querySelector(".botonFavoritoTarde").innerHTML = "Agregar Tarde";
+      document.querySelector(".botonFavoritoTarde").innerHTML = "Ver más tarde";
     } else {
       //Lo agrego
       seriesFavoritosTarde.push(idTarde);
-      document.querySelector(".botonFavoritoTarde").innerHTML = "Quitar de tarde";
+      document.querySelector(".botonFavoritoTarde").innerHTML = "QUITAR de ver más tarde";
     }
     //Paso 3: Escribir en storage
     var infoParaStorageTarde = JSON.stringify(seriesFavoritosTarde);

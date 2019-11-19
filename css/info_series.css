@@ -61,18 +61,19 @@ button:hover {
   border: solid 3px rgba(56, 240, 148, .85);
   border-radius: 25px;
 }
-.botonFavorito {
-  position: absolute;
-  left: 23%;
-  top: 6.5%;
+.boton1, .boton2  {
+  width: 50%;
+  text-align: center;
 }
-.botonFavoritoTarde {
-  position: absolute;
-  right: 2%;
-  top: 6.5%;
+.boton1 button, .boton2 button{
+  margin: 1%;
+  padding: 1.5%;
 }
 
 /* recomendaciones */
+#boton-recom{
+  font-size: 1.5rem;
+}
 main .Recomendaciones #titulos {
   width: 95%;
   margin-bottom: 2%;
@@ -80,6 +81,7 @@ main .Recomendaciones #titulos {
 
 .Recomendaciones {
   display: none;
+
 }
 
 .show {
@@ -100,14 +102,6 @@ main .Recomendaciones #titulos {
   button{
     font-size: 1rem;
   }
-  .botonFavorito {
-    left: 20%;
-    top: 5.5%;
-  }
-  .botonFavoritoTarde {
-    right: 6%;
-    top: 5.5%
-  }
 }
 
 /* QUERY CELULAR */
@@ -115,16 +109,7 @@ main .Recomendaciones #titulos {
   .foto_conteiner {
     height: 50%;
   }
-
-  /* main h1#titulos.primero {
-    top: 6%;
-  } */
-  .botonFavorito {
-    left: 15%;
-    top: 4.5%;
-  }
-  .botonFavoritoTarde {
-    right: 6%;
-    top: 4.5%
+  p{
+    font-size: 0.7rem;
   }
 }
