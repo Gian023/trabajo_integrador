@@ -25,7 +25,14 @@ window.onload = function() {
         titulo.innerHTML = name;
 
         for (var i = 0; i < series.length; i++) {
-          div.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
+          if (datos.results[i].poster_path == null) {
+            var photo = document.querySelector('.ul_generos');
+            photo.innerHTML += '<li><a href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="img/notfound.jpg">' + '</a></li>'
+          }
+          else {
+            div.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
+          }
+
         }
         console.log(series.length);
         if (datos.results.length == 0 && page == 1) {
