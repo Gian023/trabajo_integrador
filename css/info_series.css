@@ -64,10 +64,12 @@ button:hover {
 .botonFavorito {
   position: absolute;
   left: 23%;
+  top: 6.5%;
 }
 .botonFavoritoTarde {
   position: absolute;
-  right: 10%;
+  right: 2%;
+  top: 6.5%;
 }
 
 /* recomendaciones */
@@ -95,6 +97,17 @@ main .Recomendaciones #titulos {
   main .trailer_conteiner iframe {
     width: 95%;
   }
+  button{
+    font-size: 1rem;
+  }
+  .botonFavorito {
+    left: 20%;
+    top: 5.5%;
+  }
+  .botonFavoritoTarde {
+    right: 6%;
+    top: 5.5%
+  }
 }
 
 /* QUERY CELULAR */
@@ -103,7 +116,15 @@ main .Recomendaciones #titulos {
     height: 50%;
   }
 
-  main h1#titulos.primero {
-    top: 5%;
+  /* main h1#titulos.primero {
+    top: 6%;
+  } */
+  .botonFavorito {
+    left: 15%;
+    top: 4.5%;
+  }
+  .botonFavoritoTarde {
+    right: 6%;
+    top: 4.5%
   }
 }
