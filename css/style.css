@@ -1,78 +1,87 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
-/* importo el tipo de fuente */
 
-*{box-sizing: border-box;
+/* importo el tipo de fuente */
+* {
+  box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-}/* me aseguro que las medidas de los elementos, son las que defino */
+}
 
-body{
-  font-family:  sans-serif;
-	background-color: #222;
+/* me aseguro que las medidas de los elementos, son las que defino */
+body {
+  font-family: sans-serif;
+  background-color: #222;
   color: white;
   font-size: 1rem;
   margin: 0;
   border: 0;
   padding: 0;
   width: 100%;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 400;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
 }
 
 /*---------- HEADER -----------*/
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
 /* estilo de navegacion */
 header {
   background: rgba(56, 240, 148, 0.85);
   position: fixed;
-  z-index: 999; /* para que este arriba de todo */
+  z-index: 999;
+  /* para que este arriba de todo */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
+
 /* Izquierda */
-header .izquierda_header{
+header .izquierda_header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 55%;
   flex-wrap: wrap;
 }
+
 header .a_logo {
   width: 20%;
   margin: 2%;
 }
+
 header .a_logo .logo {
   opacity: 1;
   width: 100%;
 }
+
 header .izquierda_header nav ul li:hover a {
   color: red;
   text-decoration: none;
   font-weight: bold;
 }
-#nav-toggle{
+
+#nav-toggle {
   display: none;
 }
+
 .izquierda_header ul {
   display: flex;
 }
 
 .izquierda_header ul li {
   margin-left: 1em;
-
 }
-.izquierda_header ul li a{
+
+.izquierda_header ul li a {
   color: white;
   text-transform: uppercase;
   font-size: 1.1rem;
 }
 
-
 /* Derecha */
-header .derecha_header{
+header .derecha_header {
   display: flex;
   justify-content: flex-end;
   width: 40%;
@@ -81,62 +90,72 @@ header .derecha_header{
 
 /* << BARRA DE BUSUEDA >> */
 header .uk-navbar-container {
-border-radius: 17px;;
-width: 50%;
-/* margin-top: 5%; */
+  border-radius: 17px;
+  ;
+  width: 50%;
+  /* margin-top: 5%; */
 }
-header .uk-search-input{
-  width: 71%;;
+
+header .uk-search-input {
+  width: 71%;
+  ;
 }
 
 /* modal BUSQUEDA*/
-#avanzada{
+#avanzada {
   margin: 3%;
 }
- #modal_avanzada{
+
+#modal_avanzada {
   background-color: #222;
   border-radius: 20px;
 }
- #modal_avanzada form {
+
+#modal_avanzada form {
   display: flex;
   flex-direction: column;
 }
- #modal_avanzada  h2 {
+
+#modal_avanzada h2 {
   color: white;
   text-align: center;
 }
 
 /* MODAL USUARIO */
-
-header  #corazón{
+header #corazón {
   width: 7%;
   z-index: 9999;
 }
-header  #corazón img {
+
+header #corazón img {
   width: 100%;
 }
-header  #a_usuario{
+
+header #a_usuario {
   display: block;
   width: 9%;
-  margin:  4% 2%;
+  margin: 4% 2%;
 }
-header  #a_usuario img{
-  width:100%;
+
+header #a_usuario img {
+  width: 100%;
 }
+
 #modal_usuario {
   background-color: #222;
   border-radius: 20px;
-
 }
+
 #modal_usuario form {
   display: flex;
   flex-direction: column;
-
 }
+
 #modal_usuario h2 {
   color: white;
   text-align: center;
 }
+
 /* ----- LO QUE ESTABA EN EL QUERY- -----*/
 .nav-toggle-label {
   display: none;
@@ -147,9 +166,6 @@ header  #a_usuario img{
   grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   margin-bottom: 10%;
 } */
-
-
-
 nav {
   /* // all: unset; */
   /* position: relative;
@@ -160,14 +176,13 @@ nav {
   top: initial;
   left: initial; */
   /* end Edge support stuff */
-
   /* grid-column: 3 / 4; */
   /* display: flex;
   justify-content: flex-end; */
   /* align-items: center; */
   /* a partir de aca hago yo///////////////////// */
   margin-right: 2%;
-  margin-top:5%;
+  margin-top: 5%;
   z-index: 34;
 }
 
@@ -183,62 +198,67 @@ nav {
   transform: scale(0, 1);
   transition: transform ease-in-out 250ms;
 } */
-
 /* nav a:hover::before {
   transform: scale(1,1);
 } */
-
-
 /* ---------- Main ---------- */
-main{
+main {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
+
 main #titulos {
-color: rgba(255,255,255,0.7);
-margin-left: 2%;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 2%;
 }
-.primero{
+
+.primero {
   padding-top: 10%;
 }
-main div ul li:hover img{
+
+main div ul li:hover img {
   border: solid 1px rgba(56, 240, 148, 0.85);
   border-radius: 20px;
 }
 
 /* ---------- FOOTER ---------- */
-footer{
+footer {
   width: 100%;
   background: gray;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-footer .DB{
+
+footer .DB {
   display: flex;
   flex-direction: column;
   width: 30%;
   font-size: 0.8rem;
   margin: 2%;
 }
-footer #logo{
+
+footer #logo {
   width: 40%;
-  margin-top:5%;
+  margin-top: 5%;
 }
-footer .redes{
-  margin:2%;
+
+footer .redes {
+  margin: 2%;
   width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-footer div a{
+
+footer div a {
   color: rgba(100, 100, 100, 0.8);
   font-size: 1.1rem;
 }
-footer .contacto p{
+
+footer .contacto p {
   color: rgba(100, 100, 100, 0.8);
   font-size: 1.1rem;
 }
@@ -246,138 +266,153 @@ footer .contacto p{
 /* hover */
 footer a:hover {
   color: red;
-  text-decoration:none;
+  text-decoration: none;
 }
-footer .contacto{
+
+footer .contacto {
   display: flex;
   flex-direction: column;
-  margin:2%;
+  margin: 2%;
   width: 20%;
 }
-footer .contacto p{
-    color: rgba(100, 100, 100, 0.8);
-}
-footer .redes h2, .contacto h2{
-  color: rgba(250,250,250,0.67)
+
+footer .contacto p {
+  color: rgba(100, 100, 100, 0.8);
 }
 
-
+footer .redes h2, .contacto h2 {
+  color: rgba(250, 250, 250, 0.67)
+}
 
 /* --------------------- MEDIA QUERY --------------------*/
 /* QUERY TABLET */
-@media (min-width: 641px) and (max-width: 800px){
+@media (min-width: 641px) and (max-width: 800px) {
 
-/* FOOTER */
-  footer .DB p{
+  /* FOOTER */
+  footer .DB p {
     display: none;
   }
-  footer #logo{
+
+  footer #logo {
     width: 80%;
-    margin-top:5%;
+    margin-top: 5%;
   }
-  footer .contacto{
+
+  footer .contacto {
     display: none;
   }
-  footer .redes{
+
+  footer .redes {
     width: 50%;
   }
 }
 
 /* QUERY Celular */
 @media (max-width: 640px) {
-/* HEADER */
-.nav-toggle {
-  display:none; /*esto va a hacer que el checkbox no se vea, y va a ser reemplazado por el span */
-}
-.nav-toggle-label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin-left: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  /* lo posiciono en el medio */
-}
-.nav-toggle-label span{
-  display: block;
-  position:relative;
-}
-span {
-  color:white;
-  }
-nav  {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  width: 100%;
-  left: 0;
-  background:  var(--background);/* el de antes */
-  transform: scale(1,0); /* se esconde todo lo que esta dentro de nav, con el 0 se achico al maximo la navegacion */
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
-  /*esta bueno utilizar el transform, en lugar de display:none/display:block, porque te permite ajustar la transicion */
-}
 
-nav ul{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  /*le saco el punto del inicio */
-}
-
- nav li {
-   margin-bottom: 1em;
-   margin-left: 1em;
-
- }
-
- nav a {
-   color: white;
-   text-decoration: none;
-   font-size:1.2rem;
-   text-transform: uppercase;
-   opacity: 0;
-   transition: opacity 150ms ease-in-out;
-
- }
-
- nav a:hover {
-   color: #000;
- }
- /* el :checked buscado si a un checkbox seleccionado */
-.nav-toggle:checked ~ nav{
-  transform: scale(1,1);
-  /*ahora al seleccionar el checkbox aparece mi lista , 1,1 aparece la lista en tamano entero*/
-}
-.nav-toggle:checked ~ nav a{
-  opacity: 1;/*esto permite que vaya apareciendo el textoo */
- transition: opacity 250ms ease-in-out 250ms;
- /*cuando ya esta checkeado comienza el efecto */
- /*el segundo nos permite poner el tiempo de tardanza*/
-}
-
-.nav-toggle:checked ~ nav {
-  opacity: 1;/*esto permite que vaya apareciendo el textoo */
- transition: opacity 250ms ease-in-out 250ms;
- /*cuando ya esta checkeado comienza el efecto */
- /*el segundo nos permite poner el tiempo de tardanza*/
-}
-
-
-
-/* FOOTER */
-  footer .DB p{
+  /* HEADER */
+  .nav-toggle {
     display: none;
+    /*esto va a hacer que el checkbox no se vea, y va a ser reemplazado por el span */
   }
-  footer #logo{
+
+  .nav-toggle-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* lo posiciono en el medio */
+  }
+
+  .nav-toggle-label span {
+    display: block;
+    position: relative;
+  }
+
+  span {
+    color: white;
+  }
+
+  nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
     width: 100%;
-    margin-top:5%;
+    left: 0;
+    background: var(--background);
+    /* el de antes */
+    transform: scale(1, 0);
+    /* se esconde todo lo que esta dentro de nav, con el 0 se achico al maximo la navegacion */
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    /*esta bueno utilizar el transform, en lugar de display:none/display:block, porque te permite ajustar la transicion */
   }
-  footer .contacto{
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*le saco el punto del inicio */
+  }
+
+  nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+
+  nav a:hover {
+    color: #000;
+  }
+
+  /* el :checked buscado si a un checkbox seleccionado */
+  .nav-toggle:checked~nav {
+    transform: scale(1, 1);
+    /*ahora al seleccionar el checkbox aparece mi lista , 1,1 aparece la lista en tamano entero*/
+  }
+
+  .nav-toggle:checked~nav a {
+    opacity: 1;
+    /*esto permite que vaya apareciendo el textoo */
+    transition: opacity 250ms ease-in-out 250ms;
+    /*cuando ya esta checkeado comienza el efecto */
+    /*el segundo nos permite poner el tiempo de tardanza*/
+  }
+
+  .nav-toggle:checked~nav {
+    opacity: 1;
+    /*esto permite que vaya apareciendo el textoo */
+    transition: opacity 250ms ease-in-out 250ms;
+    /*cuando ya esta checkeado comienza el efecto */
+    /*el segundo nos permite poner el tiempo de tardanza*/
+  }
+
+  /* FOOTER */
+  footer .DB p {
     display: none;
   }
-  footer .redes{
+
+  footer #logo {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  footer .contacto {
+    display: none;
+  }
+
+  footer .redes {
     width: 50%;
   }
 }
