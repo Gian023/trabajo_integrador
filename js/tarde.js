@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
           if (serie.poster_path == null)
                 {
                   var foto = document.querySelector('#mas');
-                  foto.innerHTML += '<li><a href="info_serie.html?id='+ serie.id+'"> '+'<img src="img/tecnicos.jpg">' + '</a></li>'
+                  foto.innerHTML += '<li><a href="info_serie.html?id='+ serie.id+'"> '+'<img src="img/notfound.jpg">' + '</a></li>'
                 }
 
         })

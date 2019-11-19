@@ -57,7 +57,7 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=c0e01d0df95b98b689dcb3
   if (datos.poster_path == null)
   {
     var foto = document.querySelector('.foto_conteiner');
-    foto.innerHTML = '<img src="img/tecnicos.jpg">'
+    foto.innerHTML = '<img src="img/notfound.jpg">'
   }
 })
 ///////TRAILER

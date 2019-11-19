@@ -23,7 +23,7 @@ window.onload = function() {
          if (datos.poster_path == null)
                {
                  var foto = document.querySelector('.seriesfavoritas');
-                 foto.innerHTML += '<li><a href="info_serie.html?id='+ datos.results[i].id+'"> '+'<img src="img/tecnicos.jpg">' + '</a></li>'
+                 foto.innerHTML += '<li><a href="info_serie.html?id='+ datos.results[i].id+'"> '+'<img src="img/notfound.jpg">' + '</a></li>'
                }
 
        })
