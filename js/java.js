@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener("load", function() {
   // BUSCADOR
   document.querySelector("form").addEventListener("click", function(event) {
 
@@ -76,4 +76,4 @@ window.onload = function() {
 
 
 
-}
+})
