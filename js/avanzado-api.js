@@ -26,21 +26,13 @@
 var form = document.querySelector(".avana");
 var select1 = document.querySelector(".incluir");
 var select2 = document.querySelector(".excluir");
-var orden = document.querySelector(".orden");
 var input = document.querySelector("input[name=año]");
-console.log("------------");
 
 var option1Selected = select1.selectedIndex;
 var option2Selected = select2.selectedIndex;
 console.log(select1.options);
 console.log(option1Selected);
 
-// select1.addEventListener("change", function(){
-//   console.log(this.options[this.selectedIndex].value);
-//   if (this.options[this.selectedIndex].value == 0) {
-//     alert("hola")
-//   }
-// });
 
 form.onsubmit = function(event){
   if (select1.options[select1.selectedIndex].value == 0 && select2.options[select2.selectedIndex].value == 0 && input.value == "") {
@@ -52,23 +44,15 @@ form.onsubmit = function(event){
       timeout: 3000
     });
   }
-  else if (select1.options[select1.selectedIndex].value == select2.options[select2.selectedIndex].value) {
+  else if (select1.options[select1.selectedIndex].value != 0 && select2.options[select2.selectedIndex].value != 0) {
     event.preventDefault();
     UIkit.notification({
-      message: 'Los generos no pueden ser iguales',
+      message: 'No puede elegir 2 Géneros a la vez',
       status: 'primary',
       pos: 'top-center',
       timeout: 3000
     });
   }
-
-  // select1.addEventListener("change", function(){
-  //   console.log(this.options[this.selectedIndex].value);
-  //   if (this.options[this.selectedIndex].value == 0) {
-  //     alert("hola")
-  //     event.preventDefault();
-  //   }
-  // });
 }
 
 

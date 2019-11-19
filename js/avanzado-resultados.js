@@ -9,6 +9,18 @@ window.addEventListener("load", function() {
   var año = searchParams.get("año");
 
   console.log(incluir, excluir, orden, año);
+
+  //guardo lo buscado
+  var elInput = document.querySelector("#id-año")
+  elInput.setAttribute("value", año) //meto el año
+  var select1_info = document.querySelector(".incluir");
+  select1_info.setAttribute("slected", incluir)
+  var select2_info = document.querySelector(".excluir");
+    select1_info.setAttribute("selected", excluir)
+  var orden = document.querySelector(".orden");
+  console.log(orden);
+
+  //arranca scroll infinito
   var page = 1;
   vermas()
 
