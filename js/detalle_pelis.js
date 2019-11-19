@@ -48,6 +48,7 @@ window.onload = function() {
       info_conteiner.innerHTML += '<h3><strong>Lenguaje original: </strong>' + datos.original_language + '</h3>'
 
       info_conteiner.innerHTML += '<h3><strong>Sinopsis:</strong>' + ' <p><em>' + datos.overview + '</em></p></h3>'
+      info_conteiner.innerHTML += '<h3><strong>Rating:</strong>' + ' <p><em>' + datos.vote_average + '</em></p></h3>'
 
       // fecha de estreno
       info_conteiner.innerHTML += '<h3><strong>Fecha de estreno: </strong>' + datos.first_air_date + '</h3>'
@@ -99,6 +100,7 @@ window.onload = function() {
       var pel = datos.results;
 
       for (var i = 0; i < pel.length; i++) {
+        
         recomen.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
       }
     })
@@ -141,7 +143,7 @@ window.onload = function() {
   var datos = new URLSearchParams(location.search);
   var idTarde = datos.get("id");
   if (seriesFavoritos.includes(idTarde)) {
-    document.querySelector(".botonFavoritoTarde").innerHTML = "QUITAR DE tarde";
+    document.querySelector(".botonFavoritoTarde").innerHTML = "Quitar de tarde";
   }
   fetch("https://api.themoviedb.org/3/tv/" + idTarde + "?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
     .then(function(response) {
@@ -154,12 +156,12 @@ window.onload = function() {
     if (seriesFavoritosTarde.includes(idTarde)) {
       // Lo quito
       var index = seriesFavoritosTarde.indexOf(idTarde);
-      seriesFavoritos.splice(index, 1);
-      document.querySelector(".botonFavoritoTarde").innerHTML = "AGREGAR Tarde";
+      seriesFavoritosTarde.splice(index, 1);
+      document.querySelector(".botonFavoritoTarde").innerHTML = "Agregar Tarde";
     } else {
       //Lo agrego
       seriesFavoritosTarde.push(idTarde);
-      document.querySelector(".botonFavoritoTarde").innerHTML = "QUITAR DE tarde";
+      document.querySelector(".botonFavoritoTarde").innerHTML = "Quitar de tarde";
     }
     //Paso 3: Escribir en storage
     var infoParaStorageTarde = JSON.stringify(seriesFavoritosTarde);
