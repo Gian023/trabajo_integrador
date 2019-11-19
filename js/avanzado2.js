@@ -49,16 +49,16 @@ console.log(url);
     })
 
   }
-  // window.addEventListener('scroll', scrolled)
-  // function scrolled(e) {
-  //   var myDiv = document.querySelector('body')
-  //   if (myDiv.offsetHeight + myDiv.scrollTop >= myDiv.scrollHeight) {
-  //     // scrolledToBottom(e);
-  //     page++
-  //     vermas()
-  //   }
-  //
-  // }
+  window.addEventListener('scroll', scrolled)
+  function scrolled(e) {
+    var myDiv = document.querySelector('body')
+    if (myDiv.offsetHeight + myDiv.scrollTop >= myDiv.scrollHeight) {
+      // scrolledToBottom(e);
+      page++
+      vermas()
+    }
+
+  }
 
 
 
