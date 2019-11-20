@@ -118,6 +118,10 @@ header .uk-search-input {
   flex-direction: column;
 }
 
+#modal_avanzada form label{
+  font-size: 1.2rem;
+}
+
 #modal_avanzada h2 {
   color: white;
   text-align: center;
