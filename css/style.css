@@ -225,8 +225,15 @@ main div ul li:hover img {
 #avanzada{
   color: white;
   font-size: 1.2rem;
+  font-family: sans-serif;
 }
 
+
+header .derecha_header #avanzada:hover{
+color: red;
+text-decoration: none;
+font-weight: bold;
+}
 
 
 /* ---------- FOOTER ---------- */
