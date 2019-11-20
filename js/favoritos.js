@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener("load", function() {
   //Paso 1: Leo Storage
   var recuperoStorage = localStorage.getItem("seriesFavoritos");
   console.log(recuperoStorage);
@@ -37,4 +37,4 @@ window.onload = function() {
 
 
 
-}
+})
