@@ -109,6 +109,8 @@ header .uk-search-input {
 #modal_avanzada {
   background-color: #32d296;
   border-radius: 20px;
+  border-style:solid;
+  border-color: black;
 }
 
 #modal_avanzada form {
