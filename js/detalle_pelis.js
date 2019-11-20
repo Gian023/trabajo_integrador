@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener("load", function() {
 
   var recuperoStorage = localStorage.getItem("seriesFavoritos");
   // Si todavía no tenía gifs favoritos
@@ -187,14 +187,4 @@ window.onload = function() {
 
 
 
-}
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// }
+})
