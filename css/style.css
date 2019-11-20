@@ -222,6 +222,13 @@ main div ul li:hover img {
   border-radius: 20px;
 }
 
+#avanzada{
+  color: white;
+  font-size: 1.2rem;
+}
+
+
+
 /* ---------- FOOTER ---------- */
 footer {
   width: 100%;
