@@ -107,7 +107,7 @@ header .uk-search-input {
 }
 
 #modal_avanzada {
-  background-color: #222;
+  background-color: #32d296;
   border-radius: 20px;
 }
 
@@ -234,6 +234,11 @@ color: red;
 text-decoration: none;
 font-weight: bold;
 }
+
+/* BUSCADOR AVANZADO */
+
+
+
 
 
 /* ---------- FOOTER ---------- */
