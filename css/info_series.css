@@ -48,21 +48,32 @@ main .trailer_conteiner iframe {
 /* boton */
 button {
   margin: 5% auto;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.03);
   font-size: 1.3rem;
-  border-radius: 25px;
-  border: solid 3px rgba(56, 240, 148, .85);
   padding: 1%;
   color: rgba(255, 255, 255, 0.7);
+  border: none;
 }
 
 button:hover {
   color: rgba(255, 255, 255, 1);
-  font-size: 1.4rem;
   background-color: rgba(255, 255, 255, 0.1);
+  border: solid 3px rgba(56, 240, 148, .85);
+  border-radius: 25px;
+}
+.boton1, .boton2  {
+  width: 50%;
+  text-align: center;
+}
+.boton1 button, .boton2 button{
+  margin: 1%;
+  padding: 1.5%;
 }
 
 /* recomendaciones */
+#boton-recom{
+  font-size: 1.5rem;
+}
 main .Recomendaciones #titulos {
   width: 95%;
   margin-bottom: 2%;
@@ -70,6 +81,7 @@ main .Recomendaciones #titulos {
 
 .Recomendaciones {
   display: none;
+
 }
 
 .show {
@@ -77,10 +89,6 @@ main .Recomendaciones #titulos {
   /* Con esto aparecen las recomendaciones */
 }
 
-.botonFavorito {
-  position: absolute;
-  left: 25%;
-}
 
 /* QUERY TABLET */
 @media (max-width: 800px) {
@@ -91,6 +99,9 @@ main .Recomendaciones #titulos {
   main .trailer_conteiner iframe {
     width: 95%;
   }
+  button{
+    font-size: 1rem;
+  }
 }
 
 /* QUERY CELULAR */
@@ -98,8 +109,7 @@ main .Recomendaciones #titulos {
   .foto_conteiner {
     height: 50%;
   }
-
-  main h1#titulos.primero {
-    top: 5%;
+  p{
+    font-size: 0.7rem;
   }
 }

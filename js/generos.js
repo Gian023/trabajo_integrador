@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener("load", function() {
 
   // Api's
   // GENEROSSSSSSS
@@ -44,4 +44,4 @@ window.onload = function() {
 
 
 
-}
+})

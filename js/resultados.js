@@ -4,6 +4,9 @@ window.addEventListener("load", function() {
   var searchParams = new URLSearchParams(queryString); //Obtenemos las posiciones y los datos de la queryString
 
   var busqueda = searchParams.get("busqueda"); //con el método get obtenenemos el valor del término a buscar. En este obtenenemos lo que escribió el usuario en el campo de busqueda cuyo "name" es "search" (name="search").
+  var input = document.querySelector(".uk-search-input")
+  input.setAttribute("value", busqueda)
+
   var page = 1;
   vermas()
 

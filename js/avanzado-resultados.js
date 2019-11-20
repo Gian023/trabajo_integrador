@@ -9,6 +9,23 @@ window.addEventListener("load", function() {
   var año = searchParams.get("año");
 
   console.log(incluir, excluir, orden, año);
+
+  //guardo lo buscado
+  var elInput = document.querySelector("#id-año")
+  elInput.setAttribute("value", año) //meto el año
+
+  var select1_info = document.querySelector(".incluir");
+  // var selected1 = select1_info.options[select1_info.selectedIndex].value;
+  // slected1.setAttribute("selected")
+  select1_info.addEventListener("change", function(){
+    console.log(this.options[this.selectedIndex].value + "hola")
+  })
+  var select2_info = document.querySelector(".excluir");
+
+  var orden = document.querySelector(".orden");
+
+
+  //arranca scroll infinito
   var page = 1;
   vermas()
 
