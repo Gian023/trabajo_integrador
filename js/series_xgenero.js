@@ -1,4 +1,5 @@
 window.addEventListener("load", function() {
+
   //////////////////Info de la serie
   var querystring = location.search;
   var query2 = new URLSearchParams(querystring)
