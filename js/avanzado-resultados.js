@@ -27,7 +27,19 @@ console.log(select_incluir[2]);
   var select2_info = document.querySelector(".excluir");
 
   var orden = document.querySelector(".orden");
-
+// intento hacer lo que hizo mati
+  // function advancedCheck(){
+  //   var include_select = document.querySelector(".incluir").selectedIndex
+  //   var exclude_select = document.querySelector(".excluir").selectedIndex
+  //   var sort = document.querySelector(".orden").selectedIndex
+  //   var year = document.querySelector("#id-año").selectedIndex
+  //
+  //   var includeSelectedID = document.querySelector("#id-año").value;
+  //   var includeSelectedID = document.querySelector("#id-año").value
+  //   var sortSelected = document.querySelector("#id-año").value
+  //   var yearSelected = document.querySelector("#id-año").value
+  //
+  // }
 
   //arranca scroll infinito
   var page = 1;
