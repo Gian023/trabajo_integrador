@@ -235,6 +235,51 @@ header #a_usuario img {
   font-size: 1.2rem;
 }
 
+#modal_usuario form input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#modal_usuario form input:hover {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-color: blue;
+  box-sizing: border-box;
+}
+
+#modal_usuario form button[type=cancel]{
+  color:white;
+  margin: 8px 0;
+  background-color: darkred;
+  border: 0px;
+  font-weight: bold;
+}
+
+#modal_usuario form button[type=cancel]:hover{
+  background-color: #b30505;
+}
+
+#modal_usuario form button[type=Search]{
+  color:white;
+  margin: 8px 0;
+  background-color: darkgreen;
+  border: 0px;
+  font-weight: bold;
+}
+
+#modal_usuario form button[type=Search]:hover{
+  background-color: green;
+}
+
 /* ----- LO QUE ESTABA EN EL QUERY- -----*/
 .nav-toggle-label {
   display: none;
