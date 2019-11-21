@@ -83,7 +83,7 @@ header .izquierda_header nav ul li:hover a {
 header .derecha_header {
   display: flex;
   justify-content: flex-end;
-  width: 40%;
+  width: 45%;
   align-items: center;
 }
 
@@ -99,13 +99,13 @@ header .uk-search-input {
   width: 71%;
   ;
 }
-/* achico el width de 400 a 200 porque interferia con el hover de Avanzada */
 .derecha_header nav .conenedor_buscador form{
   width: 200px;
+  /* achico el width de 400 a 200 porque interferia con el hover de Avanzada */
 }
 .derecha_header nav .conenedor_buscador form input{
   border-radius: 17px;
-
+  font-size: 1.4rem;
 }
 
 /* modal BUSQUEDA*/
@@ -394,10 +394,13 @@ footer .redes h2, .contacto h2 {
 @media (min-width: 641px) and (max-width: 800px) {
 
   header .izquierda_header nav ul li a{
-    font-size: 0.86rem;
+    font-size: 0.8rem;
+  }
+  .derecha_header nav .conenedor_buscador form input{
+    font-size: 1.2rem;
   }
   header .derecha_header #avanzada{
-    display: none;
+    font-size: 0.8rem;
   }
 
   .primero{
@@ -422,21 +425,45 @@ footer .redes h2, .contacto h2 {
   }
 }
 
+
+
 /* QUERY Celular */
 @media (max-width: 640px) {
 
   /* HEADER */
+  header .derecha_header{
+    width: 65%;
+  }
   header .derecha_header #avanzada{
-    display: none;
+    font-size: 0.6rem;
+  }
+  header .izquierda_header{
+    width: 35%;
   }
   .nav-toggle {
     display: none;
     /*esto va a hacer que el checkbox no se vea, y va a ser reemplazado por el span */
   }
-
+  header .a_logo{
+    width: 55%;
+  }
+  header .uk-navbar-container {
+    height: ;
+  }
+  .derecha_header nav .conenedor_buscador form{
+    width: 130px;
+    /* achico el width de 400 a 200 porque interferia con el hover de Avanzada */
+  }
+  .derecha_header nav .conenedor_buscador form input{
+    font-size: 1rem;
+  }
+  .derecha_header nav .conenedor_buscador form span{
+    width: 15%;
+    left: 8%;
+  }
   .nav-toggle-label {
     position: absolute;
-    left: 15%;
+    left: 21%;
     top: 0;
     margin-left: 1em;
     height: 100%;
@@ -454,9 +481,9 @@ footer .redes h2, .contacto h2 {
     color: white;
   }
 
-  nav {
+  #hamburguesa{
     position: absolute;
-    top: 50%;
+    top: 69.5%;
     width: 100%;
     left: 0;
     background: rgba(56, 240, 148, 0.85);
@@ -494,12 +521,12 @@ footer .redes h2, .contacto h2 {
   }
 
   /* el :checked buscado si a un checkbox seleccionado */
-  .nav-toggle:checked~nav {
+  .nav-toggle:checked~#hamburguesa {
     transform: scale(1, 1);
     /*ahora al seleccionar el checkbox aparece mi lista , 1,1 aparece la lista en tamano entero*/
   }
 
-  .nav-toggle:checked~nav a {
+  .nav-toggle:checked~#hamburguesa a {
     opacity: 1;
     /*esto permite que vaya apareciendo el textoo */
     transition: opacity 250ms ease-in-out 250ms;
@@ -507,7 +534,7 @@ footer .redes h2, .contacto h2 {
     /*el segundo nos permite poner el tiempo de tardanza*/
   }
 
-  .nav-toggle:checked~nav {
+  .nav-toggle:checked~#hamburguesa {
     opacity: 1;
     /*esto permite que vaya apareciendo el textoo */
     transition: opacity 250ms ease-in-out 250ms;
@@ -516,16 +543,19 @@ footer .redes h2, .contacto h2 {
   }
 
   header #corazón{
-    width: 10%;
-    margin-right: 3%;
+    width: 12%;
+    margin-right: 1%;
   }
   header #a_usuario{
-    width: 15%;
-    margin-right: 5%;
+    width: 18%;
+    margin-right: 1%;
+  }
+  #avanzada{
+    margin: 1%;
   }
   /* main */
   .primero{
-    padding-top: 14%;
+    padding-top: 20%;
   }
   /* FOOTER */
   footer .DB p {
