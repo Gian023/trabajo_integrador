@@ -256,7 +256,7 @@ header #a_usuario img {
   box-sizing: border-box;
 }
 
-#modal_usuario form button[type=cancel]{
+#modal_usuario form p button[type=Cancel]{
   color:white;
   margin: 8px 0;
   background-color: darkred;
@@ -264,11 +264,11 @@ header #a_usuario img {
   font-weight: bold;
 }
 
-#modal_usuario form button[type=cancel]:hover{
+#modal_usuario form p button[type=Cancel]:hover{
   background-color: #b30505;
 }
 
-#modal_usuario form button[type=Search]{
+#modal_usuario form p button[type=submit]{
   color:white;
   margin: 8px 0;
   background-color: darkgreen;
@@ -276,7 +276,7 @@ header #a_usuario img {
   font-weight: bold;
 }
 
-#modal_usuario form button[type=Search]:hover{
+#modal_usuario form p button[type=submit]:hover{
   background-color: green;
 }
 
