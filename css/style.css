@@ -231,6 +231,10 @@ header #a_usuario img {
   text-align: center;
 }
 
+#modal_usuario form label{
+  font-size: 1.2rem;
+}
+
 /* ----- LO QUE ESTABA EN EL QUERY- -----*/
 .nav-toggle-label {
   display: none;
