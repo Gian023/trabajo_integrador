@@ -128,11 +128,11 @@ window.addEventListener("load", function() {
       // Lo quito
       var index = seriesFavoritos.indexOf(id);
       seriesFavoritos.splice(index, 1);
-      document.querySelector(".botonFavorito").innerHTML = "AGREGAR a favoritos";
+      document.querySelector(".botonFavorito").innerHTML = "Agregar a favoritos";
     } else {
       //Lo agrego
       seriesFavoritos.push(id);
-      document.querySelector(".botonFavorito").innerHTML = "QUITAR de favoritos";
+      document.querySelector(".botonFavorito").innerHTML = "Quitar de favoritos";
     }
     //Paso 3: Escribir en storage
     var infoParaStorage = JSON.stringify(seriesFavoritos);
@@ -144,7 +144,7 @@ window.addEventListener("load", function() {
   var datos = new URLSearchParams(location.search);
   var idTarde = datos.get("id");
   if (seriesFavoritos.includes(idTarde)) {
-    document.querySelector(".botonFavoritoTarde").innerHTML = "Quitar de tarde";
+    document.querySelector(".botonFavoritoTarde").innerHTML = "Quitar de ver más tarde";
   }
   fetch("https://api.themoviedb.org/3/tv/" + idTarde + "?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US")
     .then(function(response) {
@@ -162,7 +162,7 @@ window.addEventListener("load", function() {
     } else {
       //Lo agrego
       seriesFavoritosTarde.push(idTarde);
-      document.querySelector(".botonFavoritoTarde").innerHTML = "QUITAR de ver más tarde";
+      document.querySelector(".botonFavoritoTarde").innerHTML = "Quitar de ver más tarde";
     }
     //Paso 3: Escribir en storage
     var infoParaStorageTarde = JSON.stringify(seriesFavoritosTarde);
