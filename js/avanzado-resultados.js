@@ -55,8 +55,13 @@ window.addEventListener("load", function() {
         }
 
         for (var i = 0; i < datosFinales.length; i++) {
+          if (datos.results[i].poster_path == null) {
+            var foto = document.querySelector('.resultados');
+            foto.innerHTML += '<li><a href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="img/notfound.jpg">' + '</a></li>'
+          }
+          else {
           destino.innerHTML += '<li><a href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
-
+          } 
         }
         if (datos.total_pages == page) {
           console.log('cortamo');
