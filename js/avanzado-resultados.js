@@ -16,7 +16,7 @@ window.addEventListener("load", function() {
 
   var select_incluir= document.querySelector(".incluir");
   var index_incluir = select_incluir.selectedIndex
-alert(index_incluir)
+// alert(index_incluir)
   select_incluir.setAttribute("selectedIndex", "16") //meto el año
   console.log(select_incluir.options);
 console.log(select_incluir[2]);

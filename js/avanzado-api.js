@@ -55,8 +55,8 @@ form.onsubmit = function(event){
   }
 }
 
-var index_incluir = select1.selectedIndex
-alert(index_incluir)
+// var index_incluir = select1.selectedIndex
+// alert(index_incluir)
 
 
 

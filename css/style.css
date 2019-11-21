@@ -28,8 +28,7 @@ body {
 header {
   background: rgba(56, 240, 148, 0.85);
   position: fixed;
-  z-index: 999;
-  /* para que este arriba de todo */
+  z-index: 999; /* para que este arriba de todo */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -91,8 +90,8 @@ header .derecha_header {
 /* << BARRA DE BUSQUEDA >> */
 header .uk-navbar-container {
   border-radius: 17px;
-  ;
   width: 50%;
+    margin-bottom: 4%;
   /* margin-top: 5%; */
 }
 
@@ -103,6 +102,10 @@ header .uk-search-input {
 /* achico el width de 400 a 200 porque interferia con el hover de Avanzada */
 .derecha_header nav .conenedor_buscador form{
   width: 200px;
+}
+.derecha_header nav .conenedor_buscador form input{
+  border-radius: 17px;
+
 }
 
 /* modal BUSQUEDA*/
@@ -283,51 +286,16 @@ header #a_usuario img {
   background-color: green;
 }
 
-/* ----- LO QUE ESTABA EN EL QUERY- -----*/
 .nav-toggle-label {
   display: none;
 }
 
-/* header {
-  display: grid;
-  grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-  margin-bottom: 10%;
-} */
 nav {
-  /* // all: unset; */
-  /* position: relative;
-  text-align: left;
-  transition: none;
-  transform: scale(1,1);
-  background: none;
-  top: initial;
-  left: initial; */
-  /* end Edge support stuff */
-  /* grid-column: 3 / 4; */
-  /* display: flex;
-  justify-content: flex-end; */
-  /* align-items: center; */
-  /* a partir de aca hago yo///////////////////// */
   margin-right: 2%;
   margin-top: 5%;
   z-index: 34;
 }
 
-/* nav a::before {
-  content: '';
-  display: block;
-  height: 5px;
-  background: black;
-  position: absolute;
-  top: -.75em;
-  left: 0;
-  right: 0;
-  transform: scale(0, 1);
-  transition: transform ease-in-out 250ms;
-} */
-/* nav a:hover::before {
-  transform: scale(1,1);
-} */
 /* ---------- Main ---------- */
 main {
   display: flex;
@@ -361,12 +329,6 @@ color: red;
 text-decoration: none;
 font-weight: bold;
 }
-
-/* BUSCADOR AVANZADO */
-
-
-
-
 
 /* ---------- FOOTER ---------- */
 footer {
