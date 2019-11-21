@@ -169,6 +169,11 @@ header .uk-search-input {
   box-sizing: border-box;
 }
 
+#modal_avanzada form button[type=cancel]{
+  color:red;
+  margin: 8px 0;
+}
+
 
 /* MODAL USUARIO */
 header #corazón {
