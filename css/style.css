@@ -127,6 +127,7 @@ header .uk-search-input {
   text-align: center;
 }
 
+/* ESTILO BUSCADOR AVANZADO */
 #modal_avanzada form select{
   width: 100%;
   padding: 12px 20px;
@@ -193,6 +194,7 @@ header .uk-search-input {
   background-color: green;
 }
 
+/* TERMINA ESTILO BUSCADOR AVANZADO */
 
 /* MODAL USUARIO */
 header #corazón {
