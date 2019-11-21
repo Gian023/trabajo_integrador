@@ -100,6 +100,10 @@ header .uk-search-input {
   width: 71%;
   ;
 }
+/* achico el width de 400 a 200 porque interferia con el hover de Avanzada */
+.derecha_header nav .conenedor_buscador form{
+  width: 200px;
+}
 
 /* modal BUSQUEDA*/
 #avanzada {
@@ -109,8 +113,7 @@ header .uk-search-input {
 #modal_avanzada {
   background-color: #333;
   border-radius: 20px;
-  border-style:solid;
-  border-color: black;
+
 }
 
 #modal_avanzada form {
@@ -127,7 +130,74 @@ header .uk-search-input {
   text-align: center;
 }
 
+/* ESTILO BUSCADOR AVANZADO */
+#modal_avanzada form select{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
+#modal_avanzada form select:hover{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-color: blue;
+  box-sizing: border-box;
+}
+
+#modal_avanzada form input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#modal_avanzada form input:hover {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-color: blue;
+  box-sizing: border-box;
+}
+
+#modal_avanzada form button[type=cancel]{
+  color:white;
+  margin: 8px 0;
+  background-color: darkred;
+  border: 0px;
+  font-weight: bold;
+}
+
+#modal_avanzada form button[type=cancel]:hover{
+  background-color: #b30505;
+}
+
+#modal_avanzada form button[type=Search]{
+  color:white;
+  margin: 8px 0;
+  background-color: darkgreen;
+  border: 0px;
+  font-weight: bold;
+}
+
+#modal_avanzada form button[type=Search]:hover{
+  background-color: green;
+}
+
+/* TERMINA ESTILO BUSCADOR AVANZADO */
 
 /* MODAL USUARIO */
 header #corazón {
@@ -162,6 +232,55 @@ header #a_usuario img {
 #modal_usuario h2 {
   color: white;
   text-align: center;
+}
+
+#modal_usuario form label{
+  font-size: 1.2rem;
+}
+
+#modal_usuario form input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#modal_usuario form input:hover {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-color: blue;
+  box-sizing: border-box;
+}
+
+#modal_usuario form p button[type=Cancel]{
+  color:white;
+  margin: 8px 0;
+  background-color: darkred;
+  border: 0px;
+  font-weight: bold;
+}
+
+#modal_usuario form p button[type=Cancel]:hover{
+  background-color: #b30505;
+}
+
+#modal_usuario form p button[type=submit]{
+  color:white;
+  margin: 8px 0;
+  background-color: darkgreen;
+  border: 0px;
+  font-weight: bold;
+}
+
+#modal_usuario form p button[type=submit]:hover{
+  background-color: green;
 }
 
 /* ----- LO QUE ESTABA EN EL QUERY- -----*/
