@@ -396,6 +396,12 @@ footer .redes h2, .contacto h2 {
 /* QUERY TABLET */
 @media (min-width: 641px) and (max-width: 800px) {
 
+  header .izquierda_header nav ul li a{
+    font-size: 0.8rem;
+  }
+  header .derecha_header #avanzada{
+    display: none;
+  }
   /* FOOTER */
   footer .DB p {
     display: none;
@@ -419,6 +425,9 @@ footer .redes h2, .contacto h2 {
 @media (max-width: 640px) {
 
   /* HEADER */
+  header .derecha_header #avanzada{
+    display: none;
+  }
   .nav-toggle {
     display: none;
     /*esto va a hacer que el checkbox no se vea, y va a ser reemplazado por el span */
@@ -426,7 +435,7 @@ footer .redes h2, .contacto h2 {
 
   .nav-toggle-label {
     position: absolute;
-    left: 0;
+    left: 15%;
     top: 0;
     margin-left: 1em;
     height: 100%;
@@ -446,11 +455,10 @@ footer .redes h2, .contacto h2 {
 
   nav {
     position: absolute;
-    text-align: left;
-    top: 100%;
+    top: 50%;
     width: 100%;
     left: 0;
-    background: var(--background);
+    background: rgba(56, 240, 148, 0.85);
     /* el de antes */
     transform: scale(1, 0);
     /* se esconde todo lo que esta dentro de nav, con el 0 se achico al maximo la navegacion */
@@ -462,8 +470,8 @@ footer .redes h2, .contacto h2 {
   nav ul {
     margin: 0;
     padding: 0;
-    list-style: none;
-    /*le saco el punto del inicio */
+    list-style: none;/*le saco el punto del inicio */
+    margin-left: 15%;
   }
 
   nav li {
@@ -474,7 +482,7 @@ footer .redes h2, .contacto h2 {
   nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
@@ -505,7 +513,9 @@ footer .redes h2, .contacto h2 {
     /*cuando ya esta checkeado comienza el efecto */
     /*el segundo nos permite poner el tiempo de tardanza*/
   }
-
+  .primero{
+    padding-top: 14%;
+  }
   /* FOOTER */
   footer .DB p {
     display: none;
