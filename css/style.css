@@ -144,7 +144,7 @@ header .uk-search-input {
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
-  border-color: red;
+  border-color: blue;
   box-sizing: border-box;
 }
 
@@ -165,13 +165,32 @@ header .uk-search-input {
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
-  border-color: red;
+  border-color: blue;
   box-sizing: border-box;
 }
 
 #modal_avanzada form button[type=cancel]{
-  color:red;
+  color:white;
   margin: 8px 0;
+  background-color: darkred;
+  border: 0px;
+  font-weight: bold;
+}
+
+#modal_avanzada form button[type=cancel]:hover{
+  background-color: #b30505;
+}
+
+#modal_avanzada form button[type=Search]{
+  color:white;
+  margin: 8px 0;
+  background-color: darkgreen;
+  border: 0px;
+  font-weight: bold;
+}
+
+#modal_avanzada form button[type=Search]:hover{
+  background-color: green;
 }
 
 
