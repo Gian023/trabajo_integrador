@@ -107,7 +107,7 @@ header .uk-search-input {
 }
 
 #modal_avanzada {
-  background-color: #32d296;
+  background-color: #333;
   border-radius: 20px;
   border-style:solid;
   border-color: black;
@@ -126,6 +126,8 @@ header .uk-search-input {
   color: white;
   text-align: center;
 }
+
+
 
 /* MODAL USUARIO */
 header #corazón {
