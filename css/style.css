@@ -76,7 +76,7 @@ header .izquierda_header nav ul li:hover a {
 .izquierda_header ul li a {
   color: white;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* Derecha */
@@ -110,7 +110,16 @@ header .uk-search-input {
 
 /* modal BUSQUEDA*/
 #avanzada {
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
   margin: 3%;
+}
+
+header .derecha_header #avanzada:hover{
+color: red;
+text-decoration: none;
+font-weight: bold;
 }
 
 #modal_avanzada {
@@ -317,18 +326,6 @@ main div ul li:hover img {
   border-radius: 20px;
 }
 
-#avanzada{
-  color: white;
-  font-size: 1.2rem;
-  font-family: sans-serif;
-}
-
-
-header .derecha_header #avanzada:hover{
-color: red;
-text-decoration: none;
-font-weight: bold;
-}
 
 /* ---------- FOOTER ---------- */
 footer {
@@ -397,10 +394,14 @@ footer .redes h2, .contacto h2 {
 @media (min-width: 641px) and (max-width: 800px) {
 
   header .izquierda_header nav ul li a{
-    font-size: 0.8rem;
+    font-size: 0.86rem;
   }
   header .derecha_header #avanzada{
     display: none;
+  }
+
+  .primero{
+    padding-top: 12%;
   }
   /* FOOTER */
   footer .DB p {
@@ -471,15 +472,15 @@ footer .redes h2, .contacto h2 {
     margin: 0;
     padding: 0;
     list-style: none;/*le saco el punto del inicio */
-    margin-left: 15%;
+    margin-left: 12%;
   }
 
   nav li {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     margin-left: 1em;
   }
 
-  nav a {
+  header .izquierda_header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 0.8rem;
@@ -513,6 +514,16 @@ footer .redes h2, .contacto h2 {
     /*cuando ya esta checkeado comienza el efecto */
     /*el segundo nos permite poner el tiempo de tardanza*/
   }
+
+  header #corazón{
+    width: 10%;
+    margin-right: 3%;
+  }
+  header #a_usuario{
+    width: 15%;
+    margin-right: 5%;
+  }
+  /* main */
   .primero{
     padding-top: 14%;
   }
