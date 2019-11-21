@@ -17,29 +17,16 @@ window.addEventListener("load", function() {
   var select_incluir= document.querySelector(".incluir");
   var index_incluir = select_incluir.selectedIndex
 // alert(index_incluir)
-  select_incluir.setAttribute("selectedIndex", "16") //meto el año
+  // select_incluir.setAttribute("selectedIndex", "16") //no me salio
   console.log(select_incluir.options);
-console.log(select_incluir[2]);
+  console.log(select_incluir[2]);
   // slected1.setAttribute("selected")
   // select1_info.addEventListener("change", function(){
   //   console.log(this.options[this.selectedIndex].value + "hola")
   // })
   var select2_info = document.querySelector(".excluir");
-
   var orden = document.querySelector(".orden");
-// intento hacer lo que hizo mati
-  // function advancedCheck(){
-  //   var include_select = document.querySelector(".incluir").selectedIndex
-  //   var exclude_select = document.querySelector(".excluir").selectedIndex
-  //   var sort = document.querySelector(".orden").selectedIndex
-  //   var year = document.querySelector("#id-año").selectedIndex
-  //
-  //   var includeSelectedID = document.querySelector("#id-año").value;
-  //   var includeSelectedID = document.querySelector("#id-año").value
-  //   var sortSelected = document.querySelector("#id-año").value
-  //   var yearSelected = document.querySelector("#id-año").value
-  //
-  // }
+  // COMENTARIO --> no me salio dejar guardado los valores seleccionados, solo pude guardar el del imput. 
 
   //arranca scroll infinito
   var page = 1;
