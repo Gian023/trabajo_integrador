@@ -14,12 +14,16 @@ window.addEventListener("load", function() {
   var elInput = document.querySelector("#id-año")
   elInput.setAttribute("value", año) //meto el año
 
-  var select1_info = document.querySelector(".incluir");
-  // var selected1 = select1_info.options[select1_info.selectedIndex].value;
+  var select_incluir= document.querySelector(".incluir");
+  var index_incluir = select_incluir.selectedIndex
+alert(index_incluir)
+  select_incluir.setAttribute("selectedIndex", "16") //meto el año
+  console.log(select_incluir.options);
+console.log(select_incluir[2]);
   // slected1.setAttribute("selected")
-  select1_info.addEventListener("change", function(){
-    console.log(this.options[this.selectedIndex].value + "hola")
-  })
+  // select1_info.addEventListener("change", function(){
+  //   console.log(this.options[this.selectedIndex].value + "hola")
+  // })
   var select2_info = document.querySelector(".excluir");
 
   var orden = document.querySelector(".orden");
@@ -61,7 +65,7 @@ window.addEventListener("load", function() {
           }
           else {
           destino.innerHTML += '<li><a href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
-          } 
+          }
         }
         if (datos.total_pages == page) {
           console.log('cortamo');
