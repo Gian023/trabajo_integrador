@@ -78,15 +78,16 @@ else if (regaxEmail.test(email.value) == false) {
     document.querySelector("#a_usuario").style.display = "none"
     logOUTButton.style.display = "block"
     p_nombre.innerText = nombreUsuario
+        document.querySelector(".logedIn").style.display = "block"
 
   }
 
   logOUTButton.onclick = function(){
-    if (logOUTButton.style.display == "block" ) {
       document.querySelector("#a_usuario").style.display = "block"
       document.querySelector("#logOut").style.display = "none"
-      p_nombre.innerText = ""
-    }
+      document.querySelector(".logedIn").style.display = "none"
+
+      p_nombre.innerText = "";
   }
 
 
