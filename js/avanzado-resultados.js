@@ -26,7 +26,7 @@ window.addEventListener("load", function() {
   // })
   var select2_info = document.querySelector(".excluir");
   var orden = document.querySelector(".orden");
-  // COMENTARIO --> no me salio dejar guardado los valores seleccionados, solo pude guardar el del imput. 
+  // COMENTARIO --> no me salio dejar guardado los valores seleccionados, solo pude guardar el del imput.
 
   //arranca scroll infinito
   var page = 1;
@@ -88,6 +88,18 @@ window.addEventListener("load", function() {
   }
 
 
+
+  //Random
+
+  var buscarRandom = document.querySelector(".descubrir")
+
+  function aleatorio() {
+    return Math.floor(Math.random() * 9542);
+  }
+
+  buscarRandom.innerHTML = '<a href="info_serie.html?id=' + aleatorio() + '">' + 'Descubrir' + '</a>'
+
+  //Se creo una funcion que permite hallar series random
 
 
 

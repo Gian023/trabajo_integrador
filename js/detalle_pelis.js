@@ -79,17 +79,10 @@ window.addEventListener("load", function() {
   //----------- Boton --------------------
   var recom = document.querySelector(".Recomendaciones");
   var btn = document.querySelector("#boton-recom");
-
   btn.onclick = function() {
     recom.classList.toggle('show')
-    document.querySelector("#boton-recom").innerHTML = "Recomendaciones";
+    // document.querySelector("#boton-recom").innerHTML = "Recomendaciones";
   }
-
-
-
-
-
-
   /////////////////// RECOMENDADOS
   fetch("https://api.themoviedb.org/3/tv/" + id + "/recommendations?api_key=c0e01d0df95b98b689dcb3af16007742&language=en-US&page=1")
     .then(function(respuesta) {
@@ -100,8 +93,10 @@ window.addEventListener("load", function() {
       var recomen = document.querySelector("#Reco");
       var pel = datos.results;
 
-      for (var i = 0; i < pel.length; i++) {
-
+      for (var i = 1; i < pel.length; i++) {
+        var recom = document.querySelector(".Recomendaciones");
+        var btn = document.querySelector("#boton-recom");
+        btn.style.display = "block";
         recomen.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
       }
     })
