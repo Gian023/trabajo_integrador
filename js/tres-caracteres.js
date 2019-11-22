@@ -25,7 +25,7 @@ window.addEventListener("load", function() {
 //LOG IN (lo hago en este para no crear t linkear más archivos js)
 var logForm = document.querySelector(".LogIn")
 var nombre = document.querySelector("[name=nombre]")
-var email = document.querySelector("input[name=email]")
+var email = document.querySelector("[name=email]")
 
 // validacion email
 logForm.onsubmit = function(event){
@@ -48,15 +48,21 @@ else if (regaxEmail.test(email.value) == false) {
    pos: 'top-center',
    timeout: 3000
   });
-
+}else{
+  console.log(nombre.value);
+  UIkit.notification({
+    message: 'Bienvenido ' + nombre.value,
+    status: 'primary',
+    pos: 'top-center',
+    timeout: 5000
+   });
 }
+  obtenerListaUsuarios()
+  function obtenerListaUsuarios(){
+    localStorage.setItem('nombre', nombre.value)
+    localStorage.setItem('email', email.value)
 
-
-
-
-
-
-
+  }
 }
 
 
