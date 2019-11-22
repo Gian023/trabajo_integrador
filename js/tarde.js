@@ -2,6 +2,14 @@ window.addEventListener("load", function() {
   //Paso 1: Leo Storage
   var recuperoStorageTarde = localStorage.getItem("seriesFavoritosTarde");
   console.log(recuperoStorageTarde);
+
+  // hago que no se pueda ver si no estan logeados
+  var nombreUsuario = localStorage.getItem("nombre");
+  console.log(nombreUsuario);
+
+  if (nombreUsuario == "" || nombreUsuario == null) {
+    //no es necesario poner codigo aca
+  }else {
   // Si todavía no tenía gifs favoritos
   if (recuperoStorageTarde == null) {
     // Creo una lista vacia
@@ -28,4 +36,5 @@ window.addEventListener("load", function() {
         document.querySelector('.tarde').style = "display:block"
       })
   }
+}
 })

@@ -302,17 +302,19 @@ header #a_usuario img {
   text-align: center;
   flex-wrap: wrap;
   align-items: center;
+  height: 100%;
 }
 .logedIn p{
+  margin: 0;
   margin-top: 20%;
 }
 #logOut{
   font-size: 0.7rem;
   margin: 0 auto;
-  margin-bottom: 45%;
+  margin-bottom: 35%;
   display: none;
   background-color: red;
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 8%;
   border: solid 1px black;
   color: white;
@@ -424,6 +426,9 @@ footer .redes h2, .contacto h2 {
 
   header .derecha_header #avanzada {
     font-size: 0.8rem;
+  }
+  #logOut{
+    font-size: 0.6rem;
   }
 
   .primero {
@@ -586,6 +591,9 @@ footer .redes h2, .contacto h2 {
 
   #avanzada {
     margin: 1%;
+  }
+  #logOut{
+    font-size: 0.5rem;
   }
 
   /* main */
