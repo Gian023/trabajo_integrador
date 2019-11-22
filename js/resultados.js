@@ -44,8 +44,7 @@ window.addEventListener("load", function() {
           if (datos.results[i].poster_path == null) {
             var foto = document.querySelector('.resultados');
             foto.innerHTML += '<li><a href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="img/notfound.jpg">' + '</a></li>'
-          }
-          else {
+          } else {
             destino.innerHTML += '<li><a href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
           }
         }

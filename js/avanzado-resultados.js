@@ -14,9 +14,9 @@ window.addEventListener("load", function() {
   var elInput = document.querySelector("#id-año")
   elInput.setAttribute("value", año) //meto el año
 
-  var select_incluir= document.querySelector(".incluir");
+  var select_incluir = document.querySelector(".incluir");
   var index_incluir = select_incluir.selectedIndex
-// alert(index_incluir)
+  // alert(index_incluir)
   // select_incluir.setAttribute("selectedIndex", "16") //no me salio
   console.log(select_incluir.options);
   console.log(select_incluir[2]);
@@ -61,9 +61,8 @@ window.addEventListener("load", function() {
           if (datos.results[i].poster_path == null) {
             var foto = document.querySelector('.resultados');
             foto.innerHTML += '<li><a href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="img/notfound.jpg">' + '</a></li>'
-          }
-          else {
-          destino.innerHTML += '<li><a href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
+          } else {
+            destino.innerHTML += '<li><a href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
           }
         }
         if (datos.total_pages == page) {

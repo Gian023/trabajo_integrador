@@ -7,7 +7,6 @@ main ul li:hover img {
   border-radius: 20px;
 }
 
-
 main ul.seriesfavoritas {
   display: flex;
   flex-wrap: wrap;

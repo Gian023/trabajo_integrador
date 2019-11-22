@@ -23,8 +23,7 @@ window.addEventListener("load", function() {
         if (serie.poster_path == null) {
           var foto = document.querySelector('#mas');
           foto.innerHTML += '<li><a href="info_serie.html?id=' + serie.id + '"> ' + '<img src="img/notfound.jpg">' + '</a></li>'
-        }
-        else {
+        } else {
           document.querySelector("#mas").innerHTML += '<li>' + '<a href="info_serie.html?id=' + serie.id + '">' + '<img src="https://image.tmdb.org/t/p/w300/' + serie.poster_path + '">' + '</a>' + '</li>'
         }
       })

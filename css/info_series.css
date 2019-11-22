@@ -61,19 +61,22 @@ button:hover {
   border: solid 3px rgba(56, 240, 148, .85);
   border-radius: 25px;
 }
-.boton1, .boton2  {
+
+.boton1, .boton2 {
   width: 50%;
   text-align: center;
 }
-.boton1 button, .boton2 button{
+
+.boton1 button, .boton2 button {
   margin: 1%;
   padding: 1.5%;
 }
 
 /* recomendaciones */
-#boton-recom{
+#boton-recom {
   font-size: 1.5rem;
 }
+
 main .Recomendaciones #titulos {
   width: 95%;
   margin-bottom: 2%;
@@ -81,14 +84,12 @@ main .Recomendaciones #titulos {
 
 .Recomendaciones {
   display: none;
-
 }
 
 .show {
   display: block;
   /* Con esto aparecen las recomendaciones */
 }
-
 
 /* QUERY TABLET */
 @media (max-width: 800px) {
@@ -99,7 +100,8 @@ main .Recomendaciones #titulos {
   main .trailer_conteiner iframe {
     width: 95%;
   }
-  button{
+
+  button {
     font-size: 1rem;
   }
 }
@@ -109,7 +111,8 @@ main .Recomendaciones #titulos {
   .foto_conteiner {
     height: 50%;
   }
-  p{
+
+  p {
     font-size: 0.7rem;
   }
 }

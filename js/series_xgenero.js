@@ -28,8 +28,7 @@ window.addEventListener("load", function() {
           if (datos.results[i].poster_path == null) {
             var photo = document.querySelector('.ul_generos');
             photo.innerHTML += '<li><a href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="img/notfound.jpg">' + '</a></li>'
-          }
-          else {
+          } else {
             div.innerHTML += '<li><a id="click_pelis" href="info_serie.html?id=' + datos.results[i].id + '"> ' + '<img src="https://image.tmdb.org/t/p/w500/' + datos.results[i].poster_path + '">' + '</a></li>'
           }
 
