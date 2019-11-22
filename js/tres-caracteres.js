@@ -50,18 +50,12 @@ else if (regaxEmail.test(email.value) == false) {
    pos: 'top-center',
    timeout: 3000
   });
-}else{
-  console.log(nombre.value);
-  UIkit.notification({
-    message: 'Bienvenido ' + nombre.value,
-    status: 'primary',
-    pos: 'top-center',
-    timeout: 5000
-   });
 }
   guardarUsuarios()
-
 }
+
+//info log in
+
   function guardarUsuarios(){
     localStorage.setItem('nombre', nombre.value)
     localStorage.setItem('email', email.value)
@@ -74,26 +68,32 @@ else if (regaxEmail.test(email.value) == false) {
   var p_nombre = document.querySelector("#p_nombre")
   var logOUTButton = document.querySelector("#logOut")
 
-  if (nombreUsuario != "") {
+  if (nombreUsuario !== "") {
     document.querySelector("#a_usuario").style.display = "none"
     logOUTButton.style.display = "block"
     p_nombre.innerText = nombreUsuario
         document.querySelector(".logedIn").style.display = "block"
-
   }
-  function logOutTodos(){
-    document.querySelector("#a_usuario").style.display = "block"
-    document.querySelector("#logOut").style.display = "none"
-    document.querySelector(".logedIn").style.display = "none"
 
-    p_nombre.innerText = "";
+  function borrarUsuario(){
+    localStorage.removeItem('nombre', nombre.value);
+    localStorage.removeItem('email', email.value);
   }
 
   logOUTButton.onclick = function(){
-    if (logOUTButton.style.display == "block" ) {
-      logOutTodos()
-    }
+    borrarUsuario();
+    location.reload();
   }
+// alert(nombreUsuario)
+  if (nombreUsuario == null) {
+    document.querySelector("#a_usuario").style.display = "block"
+    logOUTButton.style.display = "none"
+    document.querySelector(".logedIn").style.display = "none"
+    p_nombre.innerText = "";
+
+  }
+
+
 
 
 
