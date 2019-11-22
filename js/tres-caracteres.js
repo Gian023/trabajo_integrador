@@ -71,23 +71,21 @@ else if (regaxEmail.test(email.value) == false) {
   nombreUsuario = localStorage.getItem("nombre")
   }
 
- var logOUTButton = document.querySelector("#logOut")
+  var p_nombre = document.querySelector("#p_nombre")
+  var logOUTButton = document.querySelector("#logOut")
 
   if (nombreUsuario != "") {
-    // UIkit.notification({
-    //   message: 'Bienvenido ' + nombreUsuario,
-    //   status: 'primary',
-    //   pos: 'top-center',
-    //   timeout: 5000
-    //  });
     document.querySelector("#a_usuario").style.display = "none"
     logOUTButton.style.display = "block"
+    p_nombre.innerText = nombreUsuario
+
   }
 
   logOUTButton.onclick = function(){
     if (logOUTButton.style.display == "block" ) {
       document.querySelector("#a_usuario").style.display = "block"
       document.querySelector("#logOut").style.display = "none"
+      p_nombre.innerText = ""
     }
   }
 
