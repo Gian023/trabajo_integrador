@@ -57,12 +57,20 @@ else if (regaxEmail.test(email.value) == false) {
     timeout: 5000
    });
 }
-  obtenerListaUsuarios()
-  function obtenerListaUsuarios(){
+  guardarUsuarios()
+  function guardarUsuarios(){
     localStorage.setItem('nombre', nombre.value)
     localStorage.setItem('email', email.value)
 
   }
+  obtenerUsuarios()
+  function obtenerUsuarios(){
+    var nombreStorage = localStorage.getItem("nombre")
+  }
+  alert("hola " + nombreStorage)
+}
+if (true) {
+
 }
 
 
