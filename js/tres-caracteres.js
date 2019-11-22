@@ -83,11 +83,13 @@ else if (regaxEmail.test(email.value) == false) {
   }
 
   logOUTButton.onclick = function(){
+    if (logOUTButton.style.display == "block" ) {
       document.querySelector("#a_usuario").style.display = "block"
       document.querySelector("#logOut").style.display = "none"
       document.querySelector(".logedIn").style.display = "none"
 
       p_nombre.innerText = "";
+    }
   }
 
 

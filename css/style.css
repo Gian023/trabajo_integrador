@@ -295,17 +295,27 @@ header #a_usuario img {
   background-color: green;
 }
 .logedIn{
-    display: none;
+  display: none;
   width: 15%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.logedIn p{
+  margin-top: 20%;
 }
 #logOut{
   font-size: 0.7rem;
-  margin: 2%;
+  margin: 0 auto;
+  margin-bottom: 45%;
   display: none;
+  background-color: red;
+  border-radius: 20px;
+  padding: 8%;
+  border: solid 1px black;
+  color: white;
 
 }
 .nav-toggle-label {
