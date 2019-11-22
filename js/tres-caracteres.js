@@ -22,6 +22,43 @@ window.addEventListener("load", function() {
     }
   })
 
+//LOG IN (lo hago en este para no crear t linkear más archivos js)
+var logForm = document.querySelector(".LogIn")
+var nombre = document.querySelector("[name=nombre]")
+var email = document.querySelector("input[name=email]")
+
+// validacion email
+logForm.onsubmit = function(event){
+var regaxEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+if (nombre.value == "" || email.value == "") {
+  event.preventDefault()
+  UIkit.notification({
+    message: 'Llene los dos campos por favor',
+    status: 'primary',
+    pos: 'top-center',
+    timeout: 3000
+   });
+}
+else if (regaxEmail.test(email.value) == false) {
+ event.preventDefault()
+ UIkit.notification({
+   message: 'Ingrese una direccion de correo valida',
+   status: 'primary',
+   pos: 'top-center',
+   timeout: 3000
+  });
+
+}
+
+
+
+
+
+
+
+}
+
 
 
 

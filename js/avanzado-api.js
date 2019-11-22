@@ -1,4 +1,3 @@
-// window.addEventListener("load", function() {
 window.onload = function() {
 
 
@@ -54,8 +53,7 @@ window.onload = function() {
     }
   }
 
-  // var index_incluir = select1.selectedIndex
-  // alert(index_incluir)
+
 
 
 
