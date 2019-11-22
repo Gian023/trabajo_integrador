@@ -2,6 +2,12 @@ window.addEventListener("load", function() {
   //Paso 1: Leo Storage
   var recuperoStorage = localStorage.getItem("seriesFavoritos");
   console.log(recuperoStorage);
+  // hago que no se pueda ver si no estan logeados
+  var nombreUsuario = localStorage.getItem("nombre");
+  console.log(nombreUsuario);
+  if (nombreUsuario == "" || nombreUsuario == null) {
+    document.querySelector("#Cartel_nolog").style.display = "block"
+  }else{
   // Si todavía no tenía gifs favoritos
   if (recuperoStorage == null) {
     // Creo una lista vacia
@@ -26,9 +32,8 @@ window.addEventListener("load", function() {
         }
 
       })
-
   }
-
+  }
 
   //Random
 

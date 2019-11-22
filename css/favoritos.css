@@ -25,6 +25,13 @@ main ul.seriesfavoritas li {
 main ul.seriesfavoritas li img {
   width: 100%;
 }
+#Cartel_nolog{
+  display: none;
+  color:red;
+  margin: 15%;
+  margin-bottom: 25%;
+  text-align: center;
+}
 
 /* media */
 /* TABLEt */
